@@ -18,8 +18,6 @@
     --cs4: #A16C00;
 }
 
-/* varcomm */
-
 .color-primary-0 { color: var(--cp0) }	/* Main Primary color */
 .color-primary-1 { color: var(--cp1) }
 .color-primary-2 { color: var(--cp2) }
