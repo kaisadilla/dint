@@ -1,0 +1,22 @@
+h1.classical {
+    font-family: Tangerine, serif;
+    font-size: 36pt;
+}
+
+p.classical {
+    font-family: Handlee, serif;
+    font-size: 14pt;
+}
+
+h1.modern {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+p.modern {
+    font-family: Selawik, sans-serif;
+    font-size: 12pt;
+}
+
+.paper {
+    background-image: url("../img/paper_bg.jpg");
+}
