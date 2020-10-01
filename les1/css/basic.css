@@ -16,6 +16,8 @@
     --cs2: #FFC040;
     --cs3: #CC8900;
     --cs4: #A16C00;
+    --bg: #f6f6f6;
+    --text: #222;
 }
 
 .color-primary-0 { color: var(--cp0) }	/* Main Primary color */
@@ -35,13 +37,15 @@ body {
     font-family: 'Segoe UI', Roboto, Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.content {
-    background-color: #fff;
+.main-content {
+    background-color: #f6f6f6;
     border-radius: 5px;
     margin: 0 auto;
     width: 65%;
+    min-height: 650px;
     padding: 5px 20px 20px 20px;
     margin-bottom: 100px;
+    color: #222;
 }
 
 .nav {
@@ -71,4 +75,44 @@ body {
 .nav a.active {
     background-color: var(--cs4);
     color: white;
+}
+
+.centered-div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.gallery-content {
+    padding: 0px 0px 0px 0px;
+}
+
+ul.standard {
+    border: 1px solid var(--cp1);
+    border-radius: 7px;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    list-style: none;
+}
+
+ul.standard li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px 0px 0px -40px;
+    color: var(--cp3);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+ul.standard a:not(:last-child) > li {
+    border-bottom: 1px solid var(--cp1);
+}
+
+ul.standard li:hover {
+    background-color: var(--cs1);
 }

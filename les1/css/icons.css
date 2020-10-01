@@ -1,0 +1,15 @@
+
+button {
+    background-color: var(--cs1);
+    color: var(--cs5);
+    border: 1px solid var(--cs2);
+    padding-top: 2px;
+}
+
+button:hover {
+    background-color: #ffdc95;
+}
+
+button:active {
+    background-color: var(--cs2);
+}

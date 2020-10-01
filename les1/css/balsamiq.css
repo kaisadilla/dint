@@ -1,0 +1,46 @@
+
+h1 {
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    height: 600px;
+}
+
+td:first-child {
+    width: 20%;
+}
+  
+td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.section a {
+    font-weight: 600;
+    color: var(--cs5);
+    text-decoration: none;
+}
+
+.section {
+    background-color: var(--cs2);
+    border-radius: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px 5px 10px 5px;
+}
+
+img.rounded {
+    border-radius: 20px;
+}
+
+img.adapt {
+    width: 100%;
+}

@@ -20,3 +20,11 @@ p.modern {
 .paper {
     background-image: url("../img/paper_bg.jpg");
 }
+
+::-moz-selection {
+    background: var(--cs2);
+}
+
+::selection {
+    background: var(--cs2);
+}
