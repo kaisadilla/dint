@@ -4,57 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño de interfaces web</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <h2>Diseño de interfaces web</h2>
+    <div class="nav">
+        <a href="../index.html">Página Principal</a>
+    </div>
 
-    <ol id="courses">
-        <li>
-            <a href="les1/index.html">Planificación de interfaces</a>
-            <ul>
-                <li>Teoría</li>
-                <li>Práctica</li>
-                <li>Herramientas</li>
-            </ul>
-        </li>
-        <li>
-            Uso de estilos
-            <ul>
-                <li>Teoría</li>
-                <li>Práctica</li>
-                <li>Herramientas</li>
-            </ul>
-        <li>Implantación de contenido multimedia</li>
-        <li>Accesibilidad</li>
-        <li>Usabilidad</li>
-    </ol>
-
-    <hr />
-    <!--<h2>Legacy</h2>
-    <ol>
-        <li>
-            Planificación de interfaces
-            <ul>
-                <li>Teoría</li>
-                <li>Práctica</li>
-                <li>Herramientas</li>
-            </ul>
-        </li>
-        <li>
-            Uso de estilos
-            <ul>
-                <li>Teoría</li>
-                <li>Práctica</li>
-                <li>Herramientas</li>
-            </ul>
-        </li>
-        <li>Multimedia</li>
-        <li>Accesibilidad</li>
-        <li>Usabilidad</li>
-    </ol>-->
+    <div class="main-content">
+        <h1>Diseño de interfaces web</h1>
+        <p><a href="./les1/index.html">TEMA 1</a></p>
+        <p>En construcción :(</p>
+        <table>
+            <tr id="les0-header" class="les-header collapse">
+                <th>
+                    <a href="javascript:void(0)" onclick="displaySection(0)">Planificación de interfaces</a>
+                </th>
+            </tr>
+            <tr id="les0-content" class="hidden">
+                <td>
+                    <ul class="main-menu">
+                        <a href="https://drive.google.com/file/d/1hpB77h43na3oFkJ3Z7VZR-B4cGx4k-2e/view?usp=sharing" target="_blank">
+                            <li>Plantilla de Word</li>
+                        </a>
+                        <a href="colors_and_palettes.html"><li>Práctica – colores y paletas</li></a>
+                        <a href="google_fonts.html"><li>Práctica – Google Fonts</li></a>
+                        <a href="icons.html"><li>Práctica – iconos</li></a>
+                        <a href="balsamiq.html"><li>Práctica – Balsamiq</li></a>
+                    </ul>
+                </td>
+            </tr>
+            <tr id="les1-header" class="les-header collapse">
+                <th>
+                    Uso de estilos
+                </th>
+            </tr>
+            <tr id="les1-content" class="hidden">
+                <td>
+                    <ul class="main-menu">
+                        <a href="colors_and_palettes.html"><li>Lorem ipsum</li></a>
+                        <a href="google_fonts.html"><li>Dolor sit amet</li></a>
+                    </ul>
+                </td>
+            </tr>
+            <tr id="les2-header" class="les-header collapse">
+                <th>
+                    Uso de estilos
+                </th>
+            </tr>
+            <tr id="les2-content" class="hidden">
+                <td>
+                </td>
+            </tr>
+            <tr id="les3-header" class="les-header collapse">
+                <th>
+                    Accesibilidad
+                </th>
+            </tr>
+            <tr id="les3-content" class="hidden">
+                <td>
+                </td>
+            </tr>
+            <tr id="les4-header" class="les-header collapse">
+                <th>
+                    Usabilidad
+                </th>
+            </tr>
+            <tr id="les4-content hidden">
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
+<script src="../js/jquery-3.5.1.min.js"></script> 
+<script>
+    function displaySection(index) {
+        for (let i = 0; i < 5; i++) {
+            let header = $(`#les${i}-header`);
+            let content = $(`#les${i}-content`);
 
-<!--<script type="text/javascript" src="script.js"></script>-->
-
+            if (i === index) {
+                header.addClass("expand");
+                header.removeClass("collapse");
+                content.removeClass("hidden");
+            }
+            else {
+                header.addClass("collapse");
+                header.removeClass("expand");
+                content.addClass("hidden");
+            }
+        }
+    }
+</script>
 </html>
+
+
+<!--<ol id="courses">
+    <li>
+        <a href="les1/index.html">Planificación de interfaces</a>
+        <ul>
+            <li>Teoría</li>
+            <li>Práctica</li>
+            <li>Herramientas</li>
+        </ul>
+    </li>
+    <li>
+        Uso de estilos
+        <ul>
+            <li>Teoría</li>
+            <li>Práctica</li>
+            <li>Herramientas</li>
+        </ul>
+    <li>Implantación de contenido multimedia</li>
+    <li>Accesibilidad</li>
+    <li>Usabilidad</li>
+</ol>-->

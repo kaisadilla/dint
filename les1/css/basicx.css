@@ -1,0 +1,124 @@
+/* Palette URL: http://paletton.com/#uid=14A0u0kkWlSalxnfDrbq9gEvybf */
+
+:root {
+    /*--cp0: #542E75;
+    --cp1: #977BAF;
+    --cp2: #7e599e;
+    --cp3: #3A1559;
+    --cp4: #1f0336;*/
+    --cp0: #1D3657;
+    --cp1: #4F6786;
+    --cp2: #314B6D;
+    --cp3: #0C223E;
+    --cp4: #031225;
+    --cs0: #FFB00D;
+    --cs1: #FFCE69;
+    --cs2: #FFC040;
+    --cs3: #CC8900;
+    --cs4: #A16C00;
+    --bg: #f6f6f6;
+    --text: #222;
+}
+
+.color-primary-0 { color: var(--cp0) }	/* Main Primary color */
+.color-primary-1 { color: var(--cp1) }
+.color-primary-2 { color: var(--cp2) }
+.color-primary-3 { color: var(--cp3) }
+.color-primary-4 { color: var(--cp4) }
+
+.color-complement-0 { color: var(--cs0) }	/* Main Complement color */
+.color-complement-1 { color: var(--cs1) }
+.color-complement-2 { color: var(--cs2) }
+.color-complement-3 { color: var(--cs3) }
+.color-complement-4 { color: var(--cs4) }
+
+body {
+    background-color: var(--cp0);
+    font-family: 'Segoe UI', Roboto, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-content {
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 65%;
+    min-height: 650px;
+    padding: 5px 20px 20px 20px;
+    margin-bottom: 100px;
+    color: #222;
+}
+
+.nav {
+    overflow: hidden;
+    background-color: var(--cs0);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav a {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--cs5);
+}
+
+.nav a:hover {
+    background: var(--cs1);
+}
+
+.nav a.active {
+    background-color: var(--cs4);
+    color: white;
+}
+
+.centered-div {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.gallery-content {
+    padding: 0px 0px 0px 0px;
+}
+
+ul.standard {
+    /*border: 1px solid var(--cp1);*/
+    border-radius: 7px;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    list-style: none;
+}
+
+ul.standard li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px 0px 0px -40px;
+    color: var(--cp3);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+ul.standard a:not(:last-child) > li {
+    border-bottom: 1px solid #acbcd1;
+}
+
+ul.standard li:hover {
+    background-color: var(--cs1);
+    font-size: 18pt;
+    transition: 0.5s;
+}
+
+ul.standard a {
+    text-decoration: none;
+}

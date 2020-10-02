@@ -1,0 +1,49 @@
+ul.main-menu {
+    /*border: 1px solid var(--cp1);*/
+    border-radius: 7px;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    list-style: none;
+}
+
+ul.main-menu li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px 0px 0px -40px;
+    color: var(--cp3);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+ul.main-menu a:not(:last-child) > li {
+    border-bottom: 1px solid var(--cp5);
+}
+
+ul.main-menu li:hover {
+    background-color: var(--cs1);
+    font-size: 18pt;
+    transition: 0.5s;
+}
+
+ul.main-menu a {
+    text-decoration: none;
+}
+
+tr.les-header > th {
+    background-color: var(--cs3);
+    color: var(--cp4);
+    font-weight: 400;
+    font-size: 18pt;
+    padding: 10px 0 10px 0;
+    width: 400px;
+}
+
+tr.collapse > th {
+    border-radius: 15px;
+}
+
+tr.expand > th {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}

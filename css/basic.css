@@ -11,6 +11,7 @@
     --cp2: #314B6D;
     --cp3: #0C223E;
     --cp4: #031225;
+    --cp5: #acbcd1;
     --cs0: #FFB00D;
     --cs1: #FFCE69;
     --cs2: #FFC040;
@@ -91,28 +92,6 @@ body {
     padding: 0px 0px 0px 0px;
 }
 
-ul.standard {
-    border: 1px solid var(--cp1);
-    border-radius: 7px;
-    width: 350px;
-    margin: 0 auto;
-    text-align: center;
-    list-style: none;
-}
-
-ul.standard li {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin: 0px 0px 0px -40px;
-    color: var(--cp3);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-ul.standard a:not(:last-child) > li {
-    border-bottom: 1px solid var(--cp1);
-}
-
-ul.standard li:hover {
-    background-color: var(--cs1);
+.hidden {
+    display: none;
 }
