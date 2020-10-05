@@ -30,20 +30,27 @@ ul.main-menu a {
     text-decoration: none;
 }
 
-tr.les-header > th {
+.les-header {
     background-color: var(--cs3);
     color: var(--cp4);
     font-weight: 400;
     font-size: 18pt;
     padding: 10px 0 10px 0;
     width: 400px;
+    border: none;
 }
 
-tr.collapse > th {
+.collapse {
     border-radius: 15px;
 }
 
-tr.expand > th {
+.expand {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+}
+
+.menu-table {
+    /*display: block;
+    margin: 0 auto;
+    left: 50%;*/
 }

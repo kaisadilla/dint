@@ -43,10 +43,18 @@ body {
     border-radius: 5px;
     margin: 0 auto;
     width: 65%;
-    min-height: 650px;
     padding: 5px 20px 20px 20px;
-    margin-bottom: 100px;
     color: #222;
+}
+
+div.main-content {
+    min-height: 650px;
+    margin-bottom: 100px;
+}
+
+section.main-content {
+    margin: 5px 10px 5px 10px;
+    min-height: 120px;
 }
 
 .nav {

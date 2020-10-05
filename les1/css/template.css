@@ -1,0 +1,80 @@
+header {
+    background-color: var(--cp3);
+    text-align: center;
+    color: var(--cs0);
+}
+
+nav {
+    background-color: var(--cs0);
+    color: var(--cp4);
+    padding-left: 10px;
+    padding-right: 20px;
+}
+
+nav > input {
+    width: 200px;
+}
+
+nav > button {
+    background-color: var(--cp0);
+    color: var(--cs2);
+    border: 1pt solid var(--cp4);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+nav > span {
+    float: right;
+    display: block;
+}
+
+.material-icons {
+    font-size: 11pt;
+}
+
+section {
+    float: left;
+    width: 75%;
+}
+
+aside {
+    float: right;
+    width: 27%;
+    height: 1000px;
+    background-color: var(--cs0);
+    border-radius: 5px;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 20px 20px 20px;
+    color: #222;
+}
+
+footer {
+    overflow: hidden;
+    background-color: var(--cp3);
+    color: var(--cs0);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer a {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--cs5);
+}
+
+footer a:hover {
+    background: var(--cp1);
+}
+
+footer a.active {
+    background-color: var(--cs4);
+    color: white;
+}
