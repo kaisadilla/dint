@@ -40,6 +40,10 @@ ul.main-menu a {
     border: none;
 }
 
+.les-header:hover {
+    background-color: var(--cs2);
+}
+
 .collapse {
     border-radius: 15px;
 }
