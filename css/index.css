@@ -42,6 +42,7 @@ ul.main-menu a {
 
 .les-header:hover {
     background-color: var(--cs2);
+    cursor: pointer;
 }
 
 .collapse {
