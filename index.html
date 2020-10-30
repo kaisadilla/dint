@@ -7,6 +7,7 @@
     <title>Diseño de interfaces web</title>
     <link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
@@ -17,8 +18,12 @@
                 document.write(`<a href="https://kaisadilla.github.io/dint/">GH Pages</a>`);
             }
         </script>
+        <div class="search">
+            <input type="text" placeholder="Buscar…" name="q" id="query"/>
+            <button id="submit-query" onclick="submitSearch()"><span class="material-icons">search</span></button>
+        </div>
     </div>
-
+    
     <div class="main-content">
         <h1>Diseño de interfaces web</h1>
         <table class="menu-table">
@@ -44,6 +49,8 @@
                         <a href="les2/materialize/"><li>Materialize (Starter)</li></a>
                         <a href="les2/parallax/"><li>Materialize (Parallax)</li></a>
                         <a href="les1/bootstrap-album/"><li>Bootstrap (Album)</li></a>
+                        <a href="les1/navbar.html"><li>Colores y cosas</li></a>
+                        <a href="les1/navbar2.html"><li>Barra de navegación</li></a>
                     </ul>
                 </td>
             </tr>
@@ -112,5 +119,22 @@
             }
         }
     }
+
+    function submitSearch() {
+        let query = $("#query").val();
+        if (query != "") {
+            window.open(`https://www.google.com/search?q=site:kaisadilla.github.io/dint/+${query}`, "_self");
+        }
+    }
+
+var input = document.getElementById("query");
+
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    $("#submit-query").click();
+  }
+}); 
 </script>
 </html>

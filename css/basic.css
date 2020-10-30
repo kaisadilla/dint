@@ -17,6 +17,7 @@
     --cs2: #FFC040;
     --cs3: #CC8900;
     --cs4: #A16C00;
+    --cs5: #5f3f00;
     --bg: #f6f6f6;
     --text: #222;
 }
@@ -40,7 +41,7 @@ body {
 
 .main-content {
     background-color: #f6f6f6;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 0 auto;
     width: 65%;
     padding: 5px 20px 20px 20px;
@@ -64,17 +65,19 @@ section.main-content {
     bottom: 0;
     left: 0;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 40px;
 }
 
 .nav a {
-    float: right;
+    float: left;
     display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
     font-weight: 600;
-    color: var(--cs5);
+    color: black;
 }
 
 .nav a:hover {
@@ -84,6 +87,49 @@ section.main-content {
 .nav a.active {
     background-color: var(--cs4);
     color: white;
+}
+
+.nav .search {
+    float: right;
+    display: block;
+    margin-right: 30px;
+}
+
+.nav .search input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 12pt;
+    border: none;
+    height: 20px;
+    width: 100px;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.nav .search input[type=text]:focus {
+    width: 220px;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+}
+
+.nav .search input[type=text]::placeholder {
+    color: var(--cs5);
+}
+
+.nav .search button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: var(--cs4);
+    font-size: 12pt;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .centered-div {

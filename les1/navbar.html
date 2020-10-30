@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+li {
+    display: inline;
+    float: left;
+}
+li a {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    coloR: beige;
+    background-color: black;
+    border-right: 5px solid #f5f5dcbb;
+    width: 100px;
+    text-align: center;
+}
+li a:hover {
+    background-color: beige;
+    color: black;
+}
+.active {
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.sample {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border-radius: 10px;
+    border: 2px solid hsl(264, 100%, 50%);
+    color: hsl(264, 100%, 50%);
+    font-weight: 400;
+    font-size: 16pt;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(264, 100%, 50%);
+    color: white;
+    transition: 0.3s;
+}
+
+button:active {
+    background-color: hsl(264, 100%, 75%);
+    color: hsl(264, 100%, 25%);
+    transition: 0.15s;
+}
+
+.tree {
+  background-image: url("img/img_tree.gif");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+  border: 1px solid black;
+}
+
+body {
+    margin: 0 auto;
+    width: 75%;
+    border: 1px solid hsl(264, 100%, 70%);
+    padding-bottom: 500px;
+    margin-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="javascript:void()">Uno</a></li>
+            <li><a href="javascript:void()">Dos</a></li>
+            <li><a href="javascript:void()">Tres</a></li>
+            <li><a href="javascript:void()">Quatro</a></li>
+        </ull>
+    </nav>
+    <h1>Solid colors: </h1>
+    <div id="samples" style="display: block; max-width: 1000px">
+
+    </div>
+    <h1>Transparent colors: </h1>
+    <div id="transparent-samples" style="display: block; max-width: 1000px">
+
+    </div>
+
+    <div class="tree"></div>
+    <br />
+
+    <button>Click me owo</button>
+</body>
+</html>
+<script>
+    for (let i = 0; i < 100; i += 5) {
+        document.getElementById("samples").innerHTML += `<div class="sample" style="background-color: hsl(264, 100%, ${i}%);"></div>`;
+    }
+    for (let i = 0; i < 255; i += 12) {
+        document.getElementById("transparent-samples").innerHTML += `<div class="sample" style="background-color: #6600ff${i.toString(16)};"></div>`;
+    }
+</script>

@@ -1,0 +1,155 @@
+nav {
+    overflow: hidden;
+    background-color: var(--cs0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--cs5);
+}
+
+nav .main {
+    color: #221700;
+}
+
+nav a:hover {
+    background: var(--cs1);
+}
+
+nav a.active {
+    background-color: var(--cs4);
+    color: white;
+}
+
+nav .search {
+    float: right;
+    display: block;
+    margin-right: 30px;
+}
+
+nav .search input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 12pt;
+    border: none;
+    height: 24px;
+    width: 125px;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+nav .search input[type=text]:focus {
+    width: 250px;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+}
+
+nav .search input[type=text]::placeholder {
+    color: var(--cs5);
+}
+
+nav .search button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: var(--cs4);
+    font-size: 12pt;
+    border: none;
+    cursor: pointer;
+    height: 36px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+nav > a > span {
+    display: inline;
+    vertical-align: middle;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: var(--cs5);
+    font-weight: 600;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: var(--cs0);
+}
+
+.pagination a:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.pagination a:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.pagination a.active {
+    background-color: var(--cs4);
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: var(--cs1);
+}
+
+#paragraphs.DISABLED {
+    font-family: "Satisfy", "Segoe UI";
+    font-size: 14pt;
+}
+
+#paragraphs p::selection {
+    background-color: var(--cs0);
+}
+
+#paragraphs p::-moz-selection {
+    background-color: var(--cs0);
+}
+
+.random-button {
+    display: inline-block;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: var(--cs0);
+    color: var(--cs5);
+    box-shadow: 5px 5px 12px var(--cs5);
+    padding: 0;
+    margin: 5px;
+}
+
+.random-button:hover {
+    background-color: var(--cs4);
+    color: var(--cs0);
+}
+
+.random-button:active {
+    background-color: var(--cp0);
+    color: var(--cp5);
+}
+
+.random-button span {
+    margin: 0 auto;
+    vertical-align: middle;
+}

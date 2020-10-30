@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la búsqueda</title>
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/rudimentary-search-engine.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <a href="https://github.com/kaisadilla/dint">Repositorio</a>
+        <script>
+            if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
+                document.write(`<a href="https://kaisadilla.github.io/dint/">GH Pages</a>`);
+            }
+        </script>
+        <div class="search">
+            <form action="search.html">
+                <input type="text" placeholder="Search…" name="search" />
+                <button type="submit"><span class="material-icons">search</span></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Resultados de la búsqueda</h1>
+    </div>
+</body>
+</html>
