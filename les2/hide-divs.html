@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas que se esconden</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/hide-divs.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html">Página Principal</a>
+        <a href="https://github.com/kaisadilla/dint">Repositorio</a>
+        <script>
+            if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
+                document.write(`<a href="https://kaisadilla.github.io/dint/">GH Pages</a>`);
+            }
+        </script>
+        <div class="search">
+            <input type="text" placeholder="Buscar…" name="q" id="query"/>
+            <button id="submit-query" onclick="submitSearch()"><span class="material-icons">search</span></button>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Cajas que se esconden</h1>
+        <div class="imgbox" id="sample-1">
+            <h4>Sample 1</h4>
+            <img src="img/img_5terre.jpg" />
+            <button onclick="hide1()">display: none</button>
+        </div>
+        <div class="imgbox" id="sample-2">
+            <h4>Sample 2</h4>
+            <img src="img/img_lights.jpg" />
+            <button onclick="hide2()">visibility: hidden</button>
+        </div>
+        <div class="imgbox" id="sample-3">
+            <h4>Sample 3</h4>
+            <img src="img/img_forest.jpg" />
+            <button onclick="restore()">Reset</button>
+        </div>
+    </div>
+</body>
+<script>
+    function hide1() {
+        document.getElementById("sample-1").style.display = "none";
+    }
+
+    function hide2() {
+        document.getElementById("sample-2").style.visibility = "hidden";
+    }
+
+    function restore() {
+        document.getElementById("sample-1").style.display = "block";
+        document.getElementById("sample-2").style.visibility = "visible";
+    }
+</script>
+</html>

@@ -1,0 +1,19 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: #ffa06a;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery > img {
+  width: 175px;
+  margin: 5px;
+  text-align: center;
+  line-height: 75px;
+  box-shadow: 6px 6px 6px #e25300;
+  border: 3px solid #b34100;
+  border-radius: 10px;
+}

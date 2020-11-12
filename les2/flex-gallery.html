@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/flex-gallery.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Galería</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html">Página Principal</a>
+        <a href="https://github.com/kaisadilla/dint">Repositorio</a>
+        <script>
+            if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
+                document.write(`<a href="https://kaisadilla.github.io/dint/">GH Pages</a>`);
+            }
+        </script>
+        <div class="search">
+            <input type="text" placeholder="Buscar…" name="q" id="query"/>
+            <button id="submit-query" onclick="submitSearch()"><span class="material-icons">search</span></button>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Galería flex</h1>
+        <div class="gallery">
+            <script>
+                let gallery = document.getElementsByClassName("gallery")[0];
+                for (let i = 0; i < 20; i++) {
+                    gallery.innerHTML += '<img src="img/leaves.jpg" />';
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

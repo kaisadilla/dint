@@ -62,6 +62,8 @@
                 <td>
                     <ul class="main-menu">
                         <a href="les1/navbar2.html"><li>Barra de navegación</li></a>
+                        <a href="les2/hide-divs.html"><li>Cajas que se esconden</li></a>
+                        <a href="les2/flex-gallery.html"><li>Flexbox</li></a>
                     </ul>
                 </td>
             </tr>
@@ -119,7 +121,8 @@
             }
         }
     }
-
+</script>
+<script>
     function submitSearch() {
         let query = $("#query").val();
         if (query != "") {
@@ -127,14 +130,14 @@
         }
     }
 
-var input = document.getElementById("query");
+    var input = document.getElementById("query");
 
-input.addEventListener("keyup", function(event) {
-  // Number 13 is the "Enter" key on the keyboard
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    $("#submit-query").click();
-  }
-}); 
+    input.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        $("#submit-query").click();
+    }
+    }); 
 </script>
 </html>
