@@ -17,3 +17,7 @@
   border: 3px solid #b34100;
   border-radius: 10px;
 }
+
+.sticky {
+    position: sticky;
+}

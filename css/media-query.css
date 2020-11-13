@@ -1,0 +1,65 @@
+.menu {
+    float: right;
+    padding: 0px;
+    margin: 0px 16px 0px 0px;
+    border: 1px solid var(--cs3);
+    border-width: 0 0 1px 1px;
+    width: 351px;
+}
+
+.menu > li {
+    padding: 5px 0;
+    list-style-type: none;
+    cursor: pointer;
+    display: block;
+    width: 350px;
+    border: 1px solid var(--cs3);
+    background-color: var(--cs2);
+    margin: 0px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--cs5);
+    border-width: 1px 1px 0 0;
+}
+
+.menu > li:hover {
+    background-color: var(--cs3);
+    color: white;
+}
+
+.adapt-table {
+    width: 100%;
+    display: table;
+}
+
+.adapt-table > .column {
+    display: flex;
+    float: left;
+    width: 20%;
+    height: 180px;
+    padding: 10px;
+    background-color: var(--cs2);
+    border-radius: 10px;
+    margin: 2px;
+}
+
+.adapt-table img {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu {
+        float: none;
+    }
+    .adapt-table > .column {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .adapt-table > .column {
+        width: 90%;
+    }
+}

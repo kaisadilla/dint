@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/media-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Menú media query</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="../index.html">Página Principal</a>
+        <a href="https://github.com/kaisadilla/dint">Repositorio</a>
+        <script>
+            if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
+                document.write(`<a href="https://kaisadilla.github.io/dint/">GH Pages</a>`);
+            }
+        </script>
+        <div class="search">
+            <input type="text" placeholder="Buscar…" name="q" id="query"/>
+            <button id="submit-query" onclick="submitSearch()"><span class="material-icons">search</span></button>
+        </div>
+    </div>
+    <div class="main-content">
+        <h1>Media query</h1>
+        <h3>@media screen and (#cond)</h3>
+        <ul class="menu" id="menu">
+            <li onclick="zoomIn()">Agrandar</li>
+            <li onclick="zoomOut()">Desagrandar</li>
+            <li onclick="randomBg()">Cambiar fondo</li>
+            <li onclick="window.close()">Mostrar error en consola</li>
+            <li onclick="randomize()">Desorganizar menú</li>
+        </ul>
+        <p style="font-size: 12pt">Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. De carne cerebro lumbering animata cervello corpora quaeritis. Summus thalamus brains sit​​, morbo basal ganglia vel maleficia? De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris. Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve, imo evil braaiinns stalking monstra hypothalamus adventus resi hippocampus dentevil vultus brain comedat cerebella pitiutary gland viventium. Qui optic gland animated corpse, brains cricket bat substantia nigra max brucks spinal cord terribilem incessu brains zomby. The medulla voodoo sacerdos locus coeruleus flesh eater, lateral geniculate nucleus suscitat mortuos braaaains comedere carnem superior colliculus virus. Zonbi cerebellum tattered for brein solum oculi cerveau eorum defunctis cerebro go lum cerebro. Nescio brains an Undead cervello zombies. Sicut thalamus malus putrid brains voodoo horror. Nigh basal ganglia tofth eliv ingdead.</p>
+            
+        <p style="font-size: 12pt">Cum prefrontal cortex horribilem walking fornix dead resurgere brains de crazed limbic cortex optic nerve sepulcris creaturis, braaaaaiins zombie sicut hypothalamus de grave hippocampus feeding iride brainz et serpens. Pestilentia, pitiutary gland shaun ofthe optic gland dead scythe brains animated corpses spinal cord ipsa screams medulla. Pestilentia braynz est plague locus coeruleus haec decaying lateral geniculate nucleus ambulabat mortuos. Sicut breins zeder apathetic superior colliculus malus voodoo. Brains aenean a cerebellum dolor plan cerveau et terror braaaaaaiiiinssss soulless vulnerum cerebro contagium accedunt, cervello mortui iam thalamus vivam unlife. Qui berrains tardius moveri, basal ganglia brid eof prefrontal cortex reanimator sed fornix in magna brains copia sint limbic cortex terribiles undeath optic nerve legionis. Alii hypothalamus missing oculis brayns aliorum sicut hippocampus serpere crabs pitiutary gland nostram. Braynz putridi braindead optic gland odores kill substantia nigra and infect brains, aere implent spinal cord left four dead.</p>
+        <div class="adapt-table">
+            <div class="column"> <img src="img/bg-1.png" /> </div>
+            <div class="column"> <img src="img/bg-2.jpg" /> </div>
+            <div class="column"> <img src="img/bg-3.jpg" /> </div>
+            <div class="column"> <img src="img/bg-4.jpg" /> </div>
+        </div>
+            
+        <p style="font-size: 12pt">Medulla lucio brains fulci tremor locus coeruleus est dark vivos lateral geniculate nucleus magna. Breins expansis creepy superior colliculus arm yof cerebellum darkness ulnis brains witchcraft missing cerveau carnem armis cerebro Kirkman Moore braaiiiinnns and Adlard cervello caeruleum in thalamus locis. Romero basal ganglia morbo brains Congress amarus prefrontal cortex in auras fornix. Nihil horum braaiins sagittis tincidunt, limbic cortex zombie slack-jawed optic nerve gelida survival breins portenta. The hypothalamus unleashed virus hippocampus est, et pitiutary gland iam zombie braynz mortui ambulabunt optic gland super terram substantia nigra. Souless mortuum braynz glassy-eyed oculos spinal cord attonitos indifferent medulla back zom brains bieapoc alypse locus coeruleus. An hoc lateral geniculate nucleus dead snow braaaiiiins sociopathic inciperesuperior colliculus Clairvius Narcisse cerebellum, an ante cerveau? Is bello brains mundi z?</p>
+    </div>
+</body>
+<script>
+let paras = document.getElementsByTagName("p");
+let elements = document.getElementById('menu');
+
+    function randomize() {
+        for (let i = elements.children.length; i >= 0; i--) {
+            elements.appendChild(elements.children[Math.random() * i | 0]);
+        }
+    }
+    function randomBg() {
+        let r = Math.random() * 255 | 0;
+        let g = Math.random() * 255 | 0;
+        let b = Math.random() * 255 | 0;
+        document.getElementsByClassName("main-content")[0].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+    function zoomIn() {
+        for (let p of paras) {
+            p.style.fontSize = `${parseFloat(p.style.fontSize) + 2}pt`;
+        }
+    }
+    function zoomOut() {
+        for (let p of paras) {
+            if (parseFloat(p.style.fontSize) > 0) {
+                p.style.fontSize = `${parseFloat(p.style.fontSize) - 2}pt`;
+            }
+        }
+    }
+</script>
+</html>
