@@ -1,0 +1,158 @@
+/* it: https://web.dev/responsive-web-design-basics/ */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3c3c3c;
+}
+
+img.weather-img {
+    width: 64px;
+    height: 64px;
+}
+
+.place-info h2 {
+    font-weight: 600;
+    font-size: 32pt;
+    margin: 5px 0 5px 0;
+}
+
+.place-info > span {
+    display: block;
+    color: #5a5a5a;
+}
+
+.current-info-section {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.current-info-section > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.temp-and-weather {
+    width: 49%;
+}
+
+.temp-and-weather > * {
+    vertical-align: top;
+    display: inline-block;
+    /*float: left;*/
+}
+
+.temp-and-weather > img {
+    margin-right: 10px;
+}
+
+#temp-main {
+    font-size: 26pt;
+    font-weight: 600;
+    color: #5a5a5a;
+}
+
+#temp-symbol {
+    color: #787878;
+    padding-top: 5px;
+}
+
+.extra-current-data {
+    /*float: right;*/
+    width: 49%;
+}
+
+.extra-current-data > div > span:first-child {
+    color: #787878;
+}
+
+.day-summary {
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.day-summary > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.day-name {
+    padding: 0 5px 0 5px;
+    font-weight: 600;
+    width: 20%;
+}
+
+.weather-icon {
+    width: 30%;
+    text-align: center;
+}
+
+.minmax-temp, .pollen {
+    width: 20%;
+}
+
+.minmax-temp > span, .pollen > span {
+    display: block;
+    text-align: center;
+    color: #787878;
+}
+
+.minmax-temp > span:first-child, .pollen > span:first-child {
+    color: #3c3c3c;
+}
+
+@media screen and (min-width: 450px) {
+    .weather-icon {
+        width: 24%;
+    }
+
+    .minmax-temp, .pollen {
+        width: 24%;
+        text-align: center;
+    }
+
+    .minmax-temp > span, .pollen > span {
+        display: inline-block;
+    }
+
+    .minmax-temp > span {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .week {
+        /*display: table-row;*/
+        border-bottom: 1px solid #b4b4b4;
+        text-align: center;
+    }
+    .day-summary {
+        outline: 0px solid black;
+        border-bottom: 0;
+        margin: 0;
+        padding: 0;
+    }
+    .week > div {
+        display: inline-block;
+        width: 13.5%;
+    }
+
+    .day-summary > div {
+        display: block;
+        width: 100%;
+    }
+    .day-name {
+        text-align: center;
+        padding: 0;
+    }
+
+    .minmax-temp, .pollen {
+        text-align: center;
+    }
+
+    .minmax-temp > span, .pollen > span {
+        display: inline;
+    }
+
+    .pollen {
+        font-size: 10pt;
+    }
+}
