@@ -58,7 +58,7 @@ section.main-content {
     min-height: 120px;
 }
 
-.nav {
+nav.default {
     overflow: hidden;
     background-color: var(--cs0);
     position: fixed;
@@ -69,7 +69,7 @@ section.main-content {
     padding-right: 40px;
 }
 
-.nav a {
+nav.default a {
     float: left;
     display: block;
     text-align: center;
@@ -80,54 +80,53 @@ section.main-content {
     color: black;
 }
 
-.nav a:hover {
+nav.default a:hover {
     background: var(--cs1);
 }
 
-.nav a.active {
+nav.default a.active {
     background-color: var(--cs4);
     color: white;
 }
 
-.nav .search {
+nav.default .search {
     float: right;
     display: block;
     margin-right: 30px;
 }
 
-.nav .search input[type=text] {
-    padding: 6px;
+nav.default .search input[type=text] {
+    padding: 7px;
     margin-top: 8px;
     font-size: 12pt;
     border: none;
     height: 20px;
     width: 100px;
-    -webkit-transition: width 0.2s ease-in-out;
-    transition: width 0.2s ease-in-out;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    -webkit-transition: width 0.25s ease-in-out;
+    transition: width 0.25s ease-in-out;
 }
 
-.nav .search input[type=text]:focus {
+nav.default .search input[type=text]:focus {
     width: 220px;
-    -webkit-transition: width 0.2s ease-in-out;
-    transition: width 0.2s ease-in-out;
+    -webkit-transition: width 0.25s ease-in-out;
+    transition: width 0.25s ease-in-out;
 }
 
-.nav .search input[type=text]::placeholder {
+nav.default .search input[type=text]::placeholder {
     color: var(--cs5);
 }
 
-.nav .search button {
+nav.default .search button {
     float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: var(--cs4);
     font-size: 12pt;
-    border: none;
+    padding: 6px 10px;
+    margin: 8px 16px 0 0;
+    background-color: var(--cs4);
     cursor: pointer;
-    height: 32px;
+    border: none;
+    height: 34px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
