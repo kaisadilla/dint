@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsAppn't</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- This section contains the menu that can be opened on the left -->
+    <div id="display-menu" class="menu">
+        <a href="javascript:void(0)" class="close-menu" onclick="closeMenu()">&times;</a>
+        <ul class="content">
+            <li><a href="javascript:void(0)">Destacados</a></li>
+            <li><a href="javascript:void(0)">Propuestos</a></li>
+            <li><a href="javascript:void(0)">Importantes</a></li>
+        </ul>
+    </div>
+    <header class="app-header">
+        <span class="material-icons display-menu" onclick="openMenu()">menu</span>
+        <span class="app-name">myenterprise</span>
+        <span class="material-icons display-more">more_vert</span>
+    </header>
+    <main>
+        <nav>
+            <a href="javascript:void(0)"><span class="material-icons">camera_alt</span></a>
+            <a href="javascript:void(0)"><span>chat</span></a>
+            <a href="javascript:void(0)"><span>estado</span></a>
+            <a href="javascript:void(0)"><span>teléfono</span></a>
+        </nav>
+        <!-- Chats / categories / entries / whatever. Each "cat" article contains one of them. -->
+        <section class="cat-gallery">
+            <article class="cat">
+                <div class="thumbnail">
+                    <img src="img/profile-pic.jpg" />
+                </div>
+                <div class="sneakpeek">
+                    <div class="row">
+                        <div class="cell title">Title of category</div>
+                        <div class="cell timestamp">2020/12/02</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell content"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</span></div>
+                        <div class="cell notif round-button small"><span>2</span></div>
+                    </div>
+                </div>
+            </article>
+            <article class="cat">
+                <div class="thumbnail">
+                    <img src="img/profile-pic.jpg" />
+                </div>
+                <div class="sneakpeek">
+                    <div class="row">
+                        <div class="cell title">Title of category</div>
+                        <div class="cell timestamp">2020/11/27</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell content"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</span></div>
+                        <div class="cell notif round-button small"><span>2</span></div>
+                    </div>
+                </div>
+            </article>
+            <article class="cat">
+                <div class="thumbnail">
+                    <img src="img/profile-pic.jpg" />
+                </div>
+                <div class="sneakpeek">
+                    <div class="row">
+                        <div class="cell title">Title of category</div>
+                        <div class="cell timestamp">2020/11/21</div>
+                    </div>
+                    <div class="row">
+                        <div class="cell content"><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</span></div>
+                        <div class="cell notif round-button small"><span>2</span></div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- This section displays the selected chat / category -->
+        <section class="chosen-content">
+            <div class="content">
+                <div class="thumbnail">
+                    <img src="img/profile-pic.jpg" />
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pulvinar pellentesque habitant morbi tristique senectus et. Placerat in egestas erat imperdiet sed euismod nisi. Aliquam purus sit amet luctus venenatis lectus magna fringilla. Id ornare arcu odio ut sem nulla pharetra diam sit. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Fames ac turpis egestas integer eget aliquet. Mi quis hendrerit dolor magna eget est lorem ipsum. Maecenas accumsan lacus vel facilisis volutpat est. Condimentum mattis pellentesque id nibh tortor id aliquet lectus.</p>
+                </div>
+            </div>
+            <div class="round-button big hoverable"><span class="material-icons">mail</span></div>
+        </section>
+        <footer>
+            <div class="search">
+                <input type="text" placeholder="Buscar…" />
+                <button id="submit-query"><span class="material-icons">search</span></button>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
+<script>
+    function openMenu() {
+        document.getElementById("display-menu").style.width = "100%";
+    }
+    function closeMenu() {
+        document.getElementById("display-menu").style.width = "0%";
+    }
+</script>

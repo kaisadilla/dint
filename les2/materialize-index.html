@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="materialize/css/materialize.min.css" />
+    <script src="materialize/js/materialize.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper blue darken-2">
+            <a href="javascript:void(0)" class="brand-logo">Materialize</a>
+            <ul id="nav-mobile" class="right hide-on-small-only">
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">Casa</a></li>
+                <li><a href="javascript:void(0)">Xzyraq</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s3 m3">
+                    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/andromeda-galaxy-royalty-free-image-1585682435.jpg" class="materialboxed responsive-img" />
+                </div>
+                <div class="col s3 m3">
+                    <img src="https://cdn.pocket-lint.com/r/s/1200x/assets/images/142413-apps-feature-art-and-science-collide-the-best-in-modern-space-art-image1-iha6vzu3wk.jpg" class="materialboxed responsive-img" />
+                </div>
+                <div class="col s3 m3">
+                    <img src="https://i.pinimg.com/736x/91/3f/c4/913fc45f6ebf25099e1535d88ed4ee81.jpg" class="materialboxed responsive-img" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Nuestra compañía imaginaria</h5>
+                    <p class="grey-text text-lighten-4">Un día existiremos :D</p>
+                </div>
+                <div class="col l14 s12">
+                    <h5 class="white-text">Creado por</h5>
+                    <ul>
+                        <li class="grey-text text-lighten-4">Jack el Perro</li>
+                        <li class="grey-text text-lighten-4">Jack el Destripador</li>
+                        <li class="grey-text text-lighten-4">Jack O'Neill</li>
+                        <li class="grey-text text-lighten-4">Jack O'Lantern</li>
+                        <li class="grey-text text-lighten-4">Jackfruit</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <span class="grey-text text-lighten-4">© Mañana</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    // https://codepen.io/geo555/pen/ZoOWQM this doesn't work and i'm too lazy to figure out why
+    let mb = document.getSelectorAll(".materialboxed");
+    M.Materialbox.init(mb, {});
+</script>

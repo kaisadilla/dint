@@ -1,0 +1,363 @@
+/* src: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=4527A0&secondary.color=F48FB1 */
+:root {
+    --prim0: #4527a0;
+    --prim1: #7953d2;
+    --prim2: #000070;
+    --sec0: #f48fb1;
+    --sec1: #ffc1e3;
+    --sec2: #bf5f82;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/**** APP HEADER ****/
+.app-header {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    background-color: var(--prim0);
+    width: 100%;
+    height: 60px;
+}
+
+.app-header > span {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.app-header > .display-menu {
+    cursor: pointer;
+}
+
+.app-header .app-name {
+    width: 70%;
+    color: white;
+    font-size: 16pt;
+}
+
+/**** APP BODY ****/
+/* Main has a margin so it isn't covered by the header */
+main {
+    margin-top: 60px;
+}
+
+nav {
+    overflow: hidden;
+    background-color: var(--prim1);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 6px 0;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    height: 20px;
+}
+
+/* the camera icon is always 45 pixels wide, while the rest are a 33% of the remaining width, minus 5 pixels */
+nav a:first-child {
+    width: 45px;
+}
+
+nav a:not(:first-child) {
+    width: calc((100% / 3) - (45px / 3) - 5px);
+}
+
+/**** CHATS / SECTIONS / WHATEVER ****/
+.cat-gallery {
+    padding: 0 10px;
+}
+
+.cat {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid var(--prim1);
+}
+
+.cat:hover {
+    background-color: var(--sec1);
+    cursor: pointer;
+}
+
+.cat > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cat .thumbnail {
+    width: 80px;
+    height: 80px;
+}
+
+.cat .thumbnail > img {
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    padding: 5px 5px;
+}
+
+.cat .sneakpeek {
+    width: calc(100% - 90px);
+}
+
+.cat .sneakpeek .row {
+    display: block;
+    width: 100%;
+}
+
+.cat .sneakpeek .row:first-child {
+    height: fit-content;
+}
+
+.cat .sneakpeek .row:nth-child(2) {
+    height: 50px;
+}
+
+.cat .sneakpeek .cell {
+    display: inline-block;
+}
+
+.cat .sneakpeek .title {
+    font-weight: 600;
+    width: calc(100% - 105px);
+    /* crop text that overflows the div section, add an ellipsis (…) at the end */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cat .sneakpeek .timestamp {
+    color: var(--prim2);
+    width: 90px;
+    text-align: right;
+    font-weight: 600;
+}
+
+.cat .sneakpeek .content, .cat .sneakpeek .notif {
+    margin-top: 10px;
+}
+
+.cat .sneakpeek .content {
+    color: var(--prim1);
+    width: calc(100% - 45px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cat .sneakpeek .content > span {
+    display: inline;
+}
+
+/**** OPENED CHAT / SECTION ****/
+
+.chosen-content {
+    height: 40vh;
+}
+
+.chosen-content .content {
+    margin-top: 8vh;
+}
+
+.chosen-content .thumbnail {
+    float: left;
+    margin-left: 10px;
+    height: 25vh;
+    width: fit-content;
+    padding: 5px;
+}
+
+.chosen-content .thumbnail > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 36px;
+    display: block;
+}
+
+.chosen-content .text {
+    float: right;
+    margin-right: 10px;
+    height: 25vh;
+    width: calc(100% - 145px);
+    padding: 5px;
+}
+
+.chosen-content .text > p {
+    overflow: hidden;
+    margin-top: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
+.round-button {
+    float: right;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: var(--sec0);
+    text-align: center;
+    display: inline-flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-button.big {
+    width: 50px;
+    height: 50px;
+}
+
+.round-button.small {
+    width: 30px;
+    height: 30px;
+    font-weight: 600;
+}
+
+.round-button.hoverable:hover {
+    cursor: pointer;
+    background-color: var(--sec2);
+    transition: background-color 0.75s;
+}
+
+.round-button.hoverable:active {
+    color: white;
+    background-color: var(--prim0);
+    transition: background-color 0.15s;
+}
+
+.menu {
+    max-width: 550px;
+    width: 0;
+    height: 100%;
+    position: fixed;
+    z-index: 10; /* so it's always on top */
+    top: 0;
+    left: 0;
+    background-color: #000000e6;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu a {
+    padding: 8px;
+    text-decoration: none;
+    color: var(--sec0);
+    display: block;
+    transition: 0.3s;
+    max-width: 200px;
+}
+
+.menu a:hover, .menu a:focus {
+    background-color: var(--prim0);
+}
+
+.menu-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.menu .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 32pt;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--prim0);
+    height: 45px;
+    z-index: 2;
+}
+
+.search {
+    float: right;
+    display: block;
+    margin-left: 5px;
+}
+
+.search input {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 12pt;
+    border: none;
+    height: 20px;
+    width: 100px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background: var(--sec1);
+    transition: width 0.2s ease-in-out;
+    -webkit-transition: width 0.2s ease-in-out;
+}
+
+.search input:focus {
+    width: 280px;
+    transition: width 0.2s ease-in-out;
+    -webkit-transition: width 0.2s ease-in-out;
+}
+
+.search button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: var(--sec2);
+    font-size: 12pt;
+    border: none;
+    cursor: pointer;
+    height: 32px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media screen and (min-width: 700px) {
+    .cat-gallery {
+        width: 380px;
+        border-right: 1px solid var(--prim0);
+        position: fixed;
+        z-index: 1; /* just in case this section overlaps with the content, although it should never happen */
+        top: 1;
+        left: 0;
+        overflow-x: hidden;
+        height: 100%;
+    }
+    .chosen-content {
+        width: calc(100% - 450px);
+        margin-left: 410px;
+    }
+    .app-header .display-menu, .app-header .display-more {
+        max-width: 40px;
+        padding: 0 20px;
+    }
+
+    .app-header .app-name {
+        width: 100%;
+    }
+
+    .search input:focus {
+        width: 622px;
+    }
+}
