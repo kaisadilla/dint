@@ -1,0 +1,49 @@
+$def-font: "Segoe UI", Robotto, Verdana, sans-serif;
+$def-color: red;
+$def-size: 12pt;
+$def-width: 680px;
+$weight-light: 200;
+$weight-normal: 400;
+$weight-bold: 600;
+$weight-black: 800;
+$link-color: #29296d;
+$std-transition: 0.3s ease-in-out;
+
+// das ist meine body
+body {
+    font-family: $def-font;
+    font-size: $def-size;
+    color: $def-color;
+}
+
+#container {
+    width: $def-width;
+}
+
+// das ist meine nav-bar
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        padding: 20px;
+        font-weight: $weight-black;
+        text-decoration: none;
+        color: $link-color;
+        transition: $std-transition;
+        // "&" is the parent selector.
+        &:hover {
+            background-color: $link-color;
+            color: white;
+            transition: $std-transition;
+        }
+    }
+}
