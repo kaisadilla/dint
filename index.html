@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="KCheagn3ahAKFn2w_ztARcuvBL_d3Oa85wxJPkCkIFk" />
     <title>Diseño de interfaces web</title>
-    <link rel="stylesheet" href="css/basic.css">
-    <link rel="stylesheet" href="css/index.css">
+    <!--<link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/index.css">-->
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <nav class="default">
+    <!--<nav class="default">
         <a href="https://github.com/kaisadilla/dint">Repositorio</a>
         <script>
             if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
@@ -22,9 +24,45 @@
             <input type="text" placeholder="Buscar…" name="q" id="query"/>
             <button id="submit-query" onclick="submitSearch()"><span class="material-icons">search</span></button>
         </div>
+    </nav>-->
+    <nav class="navbar">
+        <ul>
+            <li class="logo">
+
+            </li>
+            <li class="item"><a href="#">
+                <svg aria-hidden="true" width="32" height="32" focusable="false" data-prefix="fad" data-icon="home" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-home fa-w-18 fa-lg">
+                    <g class="fa-group"><path fill="currentColor" d="M336 463.59V368a16 16 0 0 0-16-16h-64a16 16 0 0 0-16 16v95.71a16 16 0 0 1-15.92 16L112 480a16 16 0 0 1-16-16V300.06l184.39-151.85a12.19 12.19 0 0 1 15.3 0L480 300v164a16 16 0 0 1-16 16l-112-.31a16 16 0 0 1-16-16.1z" class="fa-secondary"></path><path fill="currentColor" d="M573.32 268.35l-25.5 31a12 12 0 0 1-16.9 1.65L295.69 107.21a12.19 12.19 0 0 0-15.3 0L45.17 301a12 12 0 0 1-16.89-1.65l-25.5-31a12 12 0 0 1 1.61-16.89L257.49 43a48 48 0 0 1 61 0L408 116.61V44a12 12 0 0 1 12-12h56a12 12 0 0 1 12 12v138.51l83.6 68.91a12 12 0 0 1 1.72 16.93z" class="fa-primary"></path></g>
+                </svg>
+                <span class="link-name">Inicio</span>
+            </a></li>
+            <li class="item"><a href="https://github.com/kaisadilla/dint">
+                <svg aria-hidden="true" width="32" height="32" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="svg-inline--fa fa-github fa-w-16 fa-2x">
+                    <path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" class=""></path>
+                </svg>
+                <span class="link-name">Repositorio</span>
+            </a></li>
+            <script>
+                if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
+                    document.write(`
+                    <li class="item"><a href="https://kaisadilla.github.io/dint/">
+                    <svg aria-hidden="true" width="32" height="32" focusable="false" data-prefix="fad" data-icon="wifi-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="svg-inline--fa fa-wifi-1 fa-w-20 fa-lg">
+                    <g class="fa-group"><path fill="currentColor" d="M634.9 154.9C457.7-9 182.2-8.9 5.1 154.9c-6.4 6-6.8 16-.9 22.5.2.2.3.4.5.5l34.2 34c6.2 6.1 16 6.2 22.4.4 145.9-133.7 371.3-133.7 517.2 0 6.4 5.9 16.2 5.7 22.4-.4l34.2-34c6.3-6.2 6.3-16.2.2-22.5 0-.2-.2-.4-.4-.5zM522.7 268.4c-115.3-101.9-290.2-101.8-405.3 0-6.5 5.8-7.1 15.8-1.4 22.3.3.3.5.6.8.8l34.4 34c6 5.9 15.6 6.3 22.1.8 83.9-72.6 209.7-72.4 293.5 0 6.4 5.5 16 5.2 22-.8l34.4-34c6.2-6.1 6.4-16.1.3-22.4-.3-.2-.5-.4-.8-.7z" class="fa-secondary"></path><path fill="currentColor" d="M320 352c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64z" class="fa-primary"></path></g>
+                    </svg>
+                    <span class="link-name">GitHub Pages</span>
+                    </a></li>`);
+                }
+            </script>
+            <li class="item"><a href="javascript:void(0)">
+                <svg aria-hidden="true" width="32" height="32" focusable="false" data-prefix="fad" data-icon="cloud-moon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-cloud-moon fa-w-18 fa-lg">
+                    <g class="fa-group"><path fill="currentColor" d="M574 313.47A191.54 191.54 0 0 1 436.9 384a110.41 110.41 0 0 0-53.5-52.7 94.83 94.83 0 0 0 .6-10.72c0-53-43.1-96.17-96-96.17a95.1 95.1 0 0 0-36.4 7.21 124.78 124.78 0 0 0-16.7-14.22 188.15 188.15 0 0 1-1.8-25.05C233.1 86.06 319.1 0 425 0a197.47 197.47 0 0 1 35.1 3.21c8.2 1.6 10.1 12.62 2.8 16.73a150.63 150.63 0 0 0-76.1 131c0 94.17 85.4 165.7 178.5 148a9 9 0 0 1 8.7 14.53z" class="fa-secondary"></path><path fill="currentColor" d="M416 432a80 80 0 0 1-80 80H96a96 96 0 0 1-96-96c0-41.9 27.1-77.2 64.6-90.3-.1-1.9-.6-3.7-.6-5.7a96 96 0 0 1 96-96c36.2 0 67.4 20.3 83.7 49.9a63.83 63.83 0 0 1 99.1 78.8c40.9 3.5 73.2 37.4 73.2 79.3z" class="fa-primary"></path></g>
+                </svg>
+                <span class="link-name">Night mode</span>
+            </a></li>
+        </ul>
     </nav>
     
-    <div class="main-content">
+    <main class="main-content">
         <h1>Diseño de interfaces web</h1>
         <table class="menu-table">
             <tr>
@@ -99,7 +137,7 @@
                 </td>
             </tr>
         </table>
-    </div>
+    </main>
 </body>
 <script>
     selected = -1;
