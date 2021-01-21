@@ -148,3 +148,7 @@ nav.default .search button {
 .hidden {
     display: none;
 }
+
+.block-link {
+    display: block;
+}

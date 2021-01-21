@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/cello.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Responsive grid</title>
+</head>
+<body>
+    <nav class="default">
+        <a href="../index.html">Página Principal</a>
+        <a href="https://github.com/kaisadilla/dint">Repositorio</a>
+        <script>
+            if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
+                document.write(`<a href="https://kaisadilla.github.io/dint/">GH Pages</a>`);
+            }
+        </script>
+        <div class="search">
+            <input type="text" placeholder="Buscar…" name="q" id="query"/>
+            <button id="submit-query" onclick="submitSearch()"><span class="material-icons">search</span></button>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>Bootstrap (con colores alternos)</h1>
+        <a class="block-link" href="bootstrap/album/index.html">Album</a>
+        <a class="block-link" href="bootstrap/blog/index.html">Blog</a>
+        <a class="block-link" href="bootstrap/cover/index.html">Cover</a>
+        <a class="block-link" href="bootstrap/product/index.html">Product</a>
+    </main>
+</body>
+</html>
