@@ -12,3 +12,9 @@ body {
 .main-content {
     font-family: 'Abril Fatface', cursive;
 }
+
+@media only screen and (max-width: 500px) {
+    .portrait > img {
+        width: 80%;
+    }
+}
