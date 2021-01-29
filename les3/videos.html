@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/cello.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"> 
+    <title>Responsive grid</title>
+</head>
+<body>
+    <nav class="default">
+        <a href="../index.html">Página Principal</a>
+        <a href="https://github.com/kaisadilla/dint">Repositorio</a>
+        <script>
+            if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
+                document.write(`<a href="https://kaisadilla.github.io/dint/">GH Pages</a>`);
+            }
+        </script>
+        <div class="search">
+            <input type="text" placeholder="Buscar…" name="q" id="query"/>
+            <button id="submit-query" onclick="submitSearch()"><span class="material-icons">search</span></button>
+        </div>
+    </nav>
+    <main class="main-content">
+        <h1>Videos</h1>
+        <h2>No controls</h2>
+        <video autoplay>
+            <source src="video/movie_clip.ogg#t=4,12" type="video/ogg">
+            <source src="video/movie_clip.mp4#t=4,12" type="video/mp4">
+            <p>Te quedaste sin video güey.</p>
+        </video>
+        <h2>Controls</h2>
+        <video controls>
+            <source src="video/movie_clip2.ogg" type="video/ogg">
+            <source src="video/movie_clip2.mp4" type="video/mp4">
+            <track label="English" kind="subtitles" srclang="en" src="video/movie_clip2.en.vtt" default>
+            <track label="Español" kind="subtitles" srclang="es" src="video/movie_clip2.es.vtt">
+            <p>Te quedaste sin video güey.</p>
+        </video>
+        <h2>Youtube</h2>
+        <iframe width="600" height="338" src="https://www.youtube-nocookie.com/embed/tmYCusutbBY" frameborder="0" allowfullscreen></iframe>
+
+        <div class="fill"></div>
+    </main>
+</body>
+</html>

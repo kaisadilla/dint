@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosicas</title>
+    <link rel="stylesheet" href="../css/mock1.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <span class="material-icons menu-button" id="menu-button" onclick="openNav()">menu</span>
+        <span class="logo">Family friendly</span>
+    </header>
+    <nav id="menu">
+        <div class="nav-header">
+            <span class="material-icons menu-button" id="menu-button" onclick="closeNav()">menu</span>
+        </div>
+        <ul>
+            <li class="menu-option chosen" onclick="selectWrestler(0)">Bray Wyatt</li>
+            <li class="menu-option" onclick="selectWrestler(1)">Asuka</li>
+            <li class="menu-option" onclick="selectWrestler(2)">Drew McIntyre</li>
+            <li class="menu-option" onclick="selectWrestler(3)">Io Shirai</li>
+            <li class="menu-option" onclick="selectWrestler(4)">Edge</li>
+            <li class="menu-option" onclick="selectWrestler(5)">Bayley</li>
+            <li class="menu-option" onclick="selectWrestler(6)">Randy Orton</li>
+            <li class="menu-option" onclick="selectWrestler(7)">Becky Lynch</li>
+            <li class="menu-option" onclick="selectWrestler(8)">Shinsuke Nakamura</li>
+            <li class="menu-option" onclick="selectWrestler(9)">Beth Phoenix</li>
+            <li class="menu-option" onclick="selectWrestler(10)">Brock Lesnar</li>
+            <li class="menu-option" onclick="selectWrestler(11)">Charlotte Flair</li>
+            <li class="menu-option" onclick="selectWrestler(12)">Goldberg</li>
+            <li class="menu-option" onclick="selectWrestler(13)">Liv Morgan</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="gallery-showcase" id="index-0">
+            <h1>Bray Wyatt</h1>
+            <div class="gallery-container image">
+                <h2>Pictures</h2>
+                <div class="gallery-display">
+                    <picture class="portrait">
+                        <source media="(min-width: 800px)" srcset="img/bray-wyatt-1-s1.jpg">
+                        <source media="(min-width: 400px)" srcset="img/bray-wyatt-1-s2.jpg">
+                        <img src="img/bray-wyatt-1-s3.jpg" alt="Bray Wyatt 1">
+                    </picture>
+                    <picture class="portrait">
+                        <source media="(min-width: 800px)" srcset="img/bray-wyatt-2-s1.jpg">
+                        <source media="(min-width: 400px)" srcset="img/bray-wyatt-2-s2.jpg">
+                        <img src="img/bray-wyatt-2-s3.jpg" alt="Bray Wyatt 2">
+                    </picture>
+                    <picture class="portrait">
+                        <source media="(min-width: 800px)" srcset="img/bray-wyatt-3-s1.jpg">
+                        <source media="(min-width: 400px)" srcset="img/bray-wyatt-3-s2.jpg">
+                        <img src="img/bray-wyatt-3-s3.jpg" alt="Bray Wyatt 3">
+                    </picture>
+                </div>
+            </div>
+            <div class="gallery-container audio">
+                <h2>Theme</h2>
+                <audio controls>
+                    <source src="audio/bray-wyatt.mp3">
+                </audio>
+            </div>
+            <div class="gallery-container video">
+                <h2>Videos</h2>
+                <div class="gallery-display">
+                    <video controls>
+                        <source src="video/bray-wyatt-1.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="en" src="video/bray-wyatt-1.en.vtt" default>
+                        <p>The video couldn't be load.</p>
+                    </video>
+                    <iframe src="https://www.youtube.com/embed/JXEXKP5VtpI" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="cover hidden" id="cover"> </div>
+</body>
+</html>
+<script>
+    // maybe body > overflow: hidden so there's no scrollbar.
+    function openNav() {
+        $("#menu").css("width", "100%");
+        $("#cover").removeClass("hidden");
+        $("body").css("overflow", "hidden");
+        $(".gallery-container").css("overflow", "hidden");
+    }
+    function closeNav() {
+        $("#menu").css("width", "0%");
+        $("#cover").addClass("hidden");
+        $("body").css("overflow", "auto");
+        $(".gallery-container").css("overflow", "auto");
+    }
+
+    function selectWrestler(index) {
+        let options = $(".menu-option");
+        for (let i = 0; i < options.length; i++) {
+            if (i === index) {
+                $(options[i]).addClass("chosen");
+            }
+            else {
+                $(options[i]).removeClass("chosen");
+            }
+        }
+    }
+</script>

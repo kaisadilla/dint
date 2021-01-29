@@ -1,0 +1,241 @@
+$primary-color: #d6001f;
+$primary-color-light1: #e01836;
+$primary-color-light2: #f7516a;
+$primary-color-light3: #ff8396;
+$primary-color-dark1: #af001a;
+$primary-color-dark2: #7c0013;
+$primary-color-dark3: #53000d;
+$secondary-color: #f1f1f1;
+$secondary-color-dark1: #d4d4d4;
+$secondary-color-dark2: #c0c0c0;
+$secondary-color-dark3: #a7a7a7;
+$text-color-light: #f1f1f1;
+$text-color-dark: #0e0e0e;
+
+$font-segoe: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-carter: 'Carter One', cursive;
+
+$light: 200;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+$black: 800;
+
+$header-height: 50px;
+$header-line-height: 50px;
+$nav-width: 250px;
+
+$index-cover: 50;
+$index-nav: 100;
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+@mixin bordify () {
+    text-shadow: -1px -1px 0 black,
+                  1px -1px 0 black,
+                 -1px  1px 0 black,
+                  1px  1px 0 black;
+}
+
+@mixin menu-button ($line-height) {
+    margin-left: 20px;
+    font-size: 24pt;
+    color: $secondary-color;
+    line-height: $line-height;
+
+    &:hover {
+        cursor: pointer,
+    }
+}
+
+:root {
+    font-family: $font-segoe;
+    background-color: $secondary-color;
+}
+
+header {
+
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $header-height;
+    background-color: $primary-color;
+    line-height: $header-line-height;
+
+    .logo {
+        margin-left: 50px;
+        font-family: $font-carter;
+        font-size: 18pt;
+        color: $secondary-color;
+        @include bordify();
+    }
+
+    .menu-button {
+        @include menu-button($header-line-height);
+    }
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    max-width: $nav-width;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: $secondary-color-dark2;
+
+    z-index: $index-nav;
+
+    transition: width 0.25s;
+
+    .nav-header {
+        width: 100%;
+        height: $header-height;
+        line-height: $header-line-height;
+        background-color: $primary-color;
+
+        .menu-button {
+            @include menu-button($header-line-height);
+        }
+    }
+
+    .title {
+        display: block;
+        background-color: $primary-color;
+        padding: 5px 0 5px 10px;
+        font-weight: $semibold;
+        color: $text-color-light;
+        text-transform: uppercase;
+    }
+
+    ul {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            padding: 5px 0 5px 20px;
+            background-color: $secondary-color;
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid $secondary-color-dark2;
+            }
+            
+            &:hover {
+                cursor: pointer;
+                background-color: $secondary-color-dark1;
+            }
+
+            &.chosen {
+                background-color: $primary-color-dark1;
+                font-weight: $semibold;
+                color: $text-color-light;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: $header-height;
+}
+
+.gallery-showcase {
+    h1 {
+        font-weight: $semibold;
+        font-size: 18pt;
+        text-align: center;
+        padding: 10px 0 0 0;
+    }
+
+    h2 {
+        font-weight: $semibold;
+        font-size: 16pt;
+        padding: 0 0 0 15px;
+        margin: 10px 0 20px 0;
+        color: $primary-color-dark1;
+    }
+
+    .gallery-container {
+        width: 100%;
+        overflow: auto;
+
+        .gallery-display {
+            width: 750px;
+            min-width: 100%;
+            text-align: center;
+            padding: 5px 0 15px 0;
+
+            img {
+                //float: left;
+                display: inline-block;
+                padding: 5px;
+                border-radius: 20px;
+                object-fit: cover;
+    
+                width: 200px;
+                height: 200px;
+            }
+
+            video {
+                display: inline-block;
+                height: 200px;
+            }
+            iframe {
+                display: inline-block;
+                height: 200px;
+                width: 355px;
+            }
+        }
+    }
+    audio {
+        display: block;
+        margin: 0 auto;
+        width: 95%;
+        max-width: 700px;
+    }
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00000064;
+    z-index: $index-cover;
+}
+
+@media only screen and (min-width: 900px) {
+    .gallery-showcase {
+        .gallery-container {
+            display: inline-block;
+            padding: 0 5px 12px 0;
+            vertical-align: top;
+
+            &.image {
+                width: 58%;
+                border-right: 1px solid $primary-color-light3;
+            }
+            &.video {
+                width: 40%;
+            }
+            &.audio {
+                float: left;
+                width: 100%;
+            }
+            
+            .gallery-display {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none !important;
+}
