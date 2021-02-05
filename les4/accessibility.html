@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidade</title>
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="css/accessibility.css">
+
+</head>
+<body>
+    <nav class="default">
+        <a href="../index.html">Página Principal</a>
+        <a href="https://github.com/kaisadilla/dint">Repositorio</a>
+        <script>
+            if(!window.location.href.startsWith("https://kaisadilla.github.io/")) {
+                document.write(`<a href="https://kaisadilla.github.io/dint/">GH Pages</a>`);
+            }
+        </script>
+    </nav>
+    <div class="main-content paper">
+        <h1>Accesibilidad</h1>
+        <p>Internet está diseñado para trabajar con todas las personas, independientemente del hardware y software que usen, el idioma que hablen, o las capacidades que posean. Una página web accesible es una página web que cumple esta condición.</p>
+        <p>Para que una página web cumpla esta condición, es necesario que los desarrolladores de la misma hagan el esfuerzo de eliminar las barreras que esta naturalmente posee para ciertos usuarios.</p>
+
+        <h2>Por qué crear páginas accesibles</h2>
+        <p><b>La accesibilidad ayuda a la inclusión social</b> para todas aquellas personas que, por cualquier motivo, tienen problemas para utilizar Internet de forma normal. Este grupo no se limita a personas con discapacidades, sino que también beneficia a personas que tengan una conexión de mala calidad, equipos limitados, etc.</p>
+        <p><b>La accesibilidad aumenta el rango de clientes al que puedes llegar</b> al incluir a todas aquellas personas que se verían excluídas de un sitio web no accesible. En países desarrollados, la cantidad de personas con discapacidades reconocidas llega hasta el 25% por lo que es muy probable que este grupo represente una cantidad importante de potenciales consumidores de una empresa.</p>
+        <p><b>Las pautas de desarrollo de web accesibles se entrelazan con otras pautas recomendadas</b> y buenas prácticas. Muchas de las pautas a seguir para construir una página web más accesible son, en realidad, las pautas más aconsejables para elaborar código HTML, CSS y JS de calidad.</p>
+
+        <h2>Cómo crear páginas accesibles</h2>
+        <p>Los principios básicos del desarrollo accesible se enfocan a eliminar las barreras comunmente encontradas por las personas discapacitadas o con herramientas de mala calidad. Algunos de estos principios son:</p>
+        <p><b>Provee texto alternativo al contenido multimedia:</b> Las imágenes de una página web deberían utilizar el atributo "alt" para explicar qué representan dichas imágenes. Los elementos de audio y vídeo deben tener subtítulos y/o transcripciones del contenido. Estas pautas ayudan no solo a las personas discapacitadas, sino también a usuarios con mala conexión, que no entiendan bien el idioma, o que se encuentren en un lugar donde no puedan escuchar o visualizar contenido de forma clara.</p>
+        <p><b>Crea documentos con una estructura lógica:</b> Un documento bien estructurado no es solo más facil de entender y editar para el desarrollador, sino que también es más fácilmente interpretado por programas auxiliares (e.g. lectores de pantalla).</p>
+        <p><b>Permite a los usuarios saltar elementos repetitivos:</b> Los elementos que se repiten en diversas páginas de un sitio web, como el encabezado o el menú de navegación, deberían ser fáciles de ignorar para los usuarios que utilizan lectores de pantalla.</p>
+        <p><b>No utilices colores para mostrar información:</b> Los colores pueden ser una herramienta para hacer una página más simple y fácil de entender, pero no deben, por si solos, representar información. En caso contrario, las personas daltónicas y aquellas que necesiten lectores de pantalla no podrán entender dicha información.</p>
+        <p><b>Escribe contenido de forma clara y concisa:</b> No utilices términos extraños, utiliza fuentes fácilmente legibles, y no "contamines" el contenido con secciones no relacionadas.</p>
+        <p><b>Ajústate a los estándares:</b> Una página que se ajuste a los estándares de HTML y CSS será, de base, más accesible que una página que los ignore, ya que las herramientas de accesibilidad como lectores de texto intentan utilizar estos estándares para realizar su trabajo. Estos estándares además han sido desarrollados con el objetivo de no dificultar la accesibilidad. Incluso sin el objetivo de accesibilidad en mente, ajustarse a los estándares sigue siendo beneficioso, ya que estos ayudan al desarrollador a producir un código más fácilmente mantenible y de mayor calidad.</p>
+    </div>
+</body>
+</html>
