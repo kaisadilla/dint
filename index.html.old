@@ -7,8 +7,7 @@
     <title>Diseño de interfaces web</title>
     <!--<link rel="stylesheet" href="css/basic.css">
     <link rel="stylesheet" href="css/index.css">-->
-    <!--<link rel="stylesheet" href="css/style.css?v=1.0.0" />-->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?v=1.0.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -65,89 +64,132 @@
     
     <main class="main-content">
         <h1>Diseño de interfaces web</h1>
-        <div class="les-container">
-            <div class="les-display" id="header-les0">
-                <a href="javascript:void(0)" class="les-header" onclick="openLes(0)">Planificación de interfaces</a>
-                <ul class="les-items" id="items-les0">
-                    <a class="les-item" href="https://drive.google.com/file/d/1hpB77h43na3oFkJ3Z7VZR-B4cGx4k-2e/view?usp=sharing" target="_blank">
-                        <li>Plantilla de Word</li>
-                    </a>
-                    <a class="les-item" href="les1/colors_and_palettes.html"><li>Práctica – colores y paletas</li></a>
-                    <a class="les-item" href="les1/google_fonts.html"><li>Práctica – Google Fonts</li></a>
-                    <a class="les-item" href="les1/icons.html"><li>Práctica – iconos</li></a>
-                    <a class="les-item" href="les1/balsamiq.html"><li>Práctica – Balsamiq</li></a>
-                    <a class="les-item" href="les1/template.html"><li>Práctica – Maqueta</li></a>
-                    <a class="les-item" href="les1/form.html"><li>Práctica – formulario</li></a>
-                    <a class="les-item" href="sitemap.xml"><li>Sitemap</li></a>
-                    <a class="les-item" href="les2/materialize/"><li>Materialize (Starter)</li></a>
-                    <a class="les-item" href="les2/parallax/"><li>Materialize (Parallax)</li></a>
-                    <a class="les-item" href="les1/bootstrap-album/"><li>Bootstrap (Album)</li></a>
-                    <a class="les-item" href="les1/navbar.html"><li>Colores y cosas</li></a>
-                </ul>
-            </div>
-            <div class="les-display" id="header-les1">
-                <a href="javascript:void(0)" class="les-header" onclick="openLes(1)">Uso de estilos</a>
-                <ul class="les-items" id="items-les1">
-                    <a class="les-item" href="les1/navbar2.html"><li>Barra de navegación</li></a>
-                    <a class="les-item" href="les2/hide-divs.html"><li>Cajas que se esconden</li></a>
-                    <a class="les-item" href="les2/flex-gallery.html"><li>Flexbox</li></a>
-                    <a class="les-item" href="les2/media-query.html"><li>Mediaquery</li></a>
-                    <a class="les-item" href="les2/weather.html"><li>New York's weather</li></a>
-                    <a class="les-item" href="les2/responsive-grid.html"><li>Responsive grid</li></a>
-                    <a class="les-item" href="examen/"><li>Examen</li></a>
-                </ul>
-            </div>
-            <div class="les-display" id="header-les2">
-                <a href="javascript:void(0)" class="les-header" onclick="openLes(2)">Contenido multimedia</a>
-                <ul class="les-items" id="items-les2">
-                    <a class="les-item" href="les3/bootstrap-index.html"><li>Bootstrap</li></a>
-                    <a class="les-item" href="les3/cellos.html"><li>&lt;picture&gt;</li></a>
-                    <a class="les-item" href="les3/videos.html"><li>&lt;video&gt;</li></a>
-                    <a class="les-item" href="les3/mock1.html"><li>Responsive webpage</li></a>
-                </ul>
-            </div>
-            <div class="les-display" id="header-les3">
-                <a href="javascript:void(0)" class="les-header" onclick="openLes(3)">Accesibilidad</a>
-                <ul class="les-items" id="items-les3">
-                    <a class="les-item" href="les4/accessibility.html"><li>Accesibilidad</li></a>
-                    <a class="les-item" href="les4/hide-divs-accessible.html"><li>Dibujos accesibles</li></a>
-                </ul>
-            </div>
-            <div class="les-display" id="header-les4">
-                <a href="javascript:void(0)" class="les-header" onclick="openLes(4)">Usabilidad</a>
-                <ul class="les-items" id="items-les4">
-                </ul>
-            </div>
-        </div>
+        <table class="menu-table">
+            <tr>
+                <th>
+                    <button id="les0-header" class="les-header collapse" onclick="displaySection(0)">Planificación de interfaces</button>
+                </th>
+            </tr>
+            <tr id="les0-content" class="hidden">
+                <td>
+                    <ul class="main-menu">
+                        <a href="https://drive.google.com/file/d/1hpB77h43na3oFkJ3Z7VZR-B4cGx4k-2e/view?usp=sharing" target="_blank">
+                            <li>Plantilla de Word</li>
+                        </a>
+                        <a href="les1/colors_and_palettes.html"><li>Práctica – colores y paletas</li></a>
+                        <a href="les1/google_fonts.html"><li>Práctica – Google Fonts</li></a>
+                        <a href="les1/icons.html"><li>Práctica – iconos</li></a>
+                        <a href="les1/balsamiq.html"><li>Práctica – Balsamiq</li></a>
+                        <a href="les1/template.html"><li>Práctica – Maqueta</li></a>
+                        <a href="les1/form.html"><li>Práctica – formulario</li></a>
+                        <a href="sitemap.xml"><li>Sitemap</li></a>
+                        <!--<a href="les1/templates.html"><li>Plantillas</li></a>-->
+                        <a href="les2/materialize/"><li>Materialize (Starter)</li></a>
+                        <a href="les2/parallax/"><li>Materialize (Parallax)</li></a>
+                        <a href="les1/bootstrap-album/"><li>Bootstrap (Album)</li></a>
+                        <a href="les1/navbar.html"><li>Colores y cosas</li></a>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <button id="les1-header" class="les-header collapse" onclick="displaySection(1)">Uso de estilos</button>
+                </th>
+            </tr>
+            <tr id="les1-content" class="hidden">
+                <td>
+                    <ul class="main-menu">
+                        <a href="les1/navbar2.html"><li>Barra de navegación</li></a>
+                        <a href="les2/hide-divs.html"><li>Cajas que se esconden</li></a>
+                        <a href="les2/flex-gallery.html"><li>Flexbox</li></a>
+                        <a href="les2/media-query.html"><li>Mediaquery</li></a>
+                        <a href="les2/weather.html"><li>New York's weather</li></a>
+                        <a href="les2/responsive-grid.html"><li>Responsive grid</li></a>
+                        <a href="examen/"><li>Examen</li></a>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <button id="les2-header" class="les-header collapse" onclick="displaySection(2)">Contenido multimedia</button>
+                </th>
+            </tr>
+            <tr id="les2-content" class="hidden">
+                <td>
+                    <ul class="main-menu">
+                        <a href="les3/bootstrap-index.html"><li>Bootstrap</li></a>
+                        <a href="les3/cellos.html"><li>&lt;picture&gt;</li></a>
+                        <a href="les3/videos.html"><li>&lt;video&gt;</li></a>
+                        <a href="les3/mock1.html"><li>Responsive webpage</li></a>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <button id="les3-header" class="les-header collapse" onclick="displaySection(3)">Accesibilidad</button>
+                </th>
+            </tr>
+            <tr id="les3-content" class="hidden">
+                <td>
+                    <ul class="main-menu">
+                        <a href="les4/accessibility.html"><li>Accesibilidad</li></a>
+                        <a href="les4/hide-divs-accessible.html"><li>Dibujos accesibles</li></a>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <button id="les4-header" class="les-header collapse" onclick="displaySection(4)">Usabilidad</button>
+                </th>
+            </tr>
+            <tr id="les4-content hidden">
+                <td>
+                </td>
+            </tr>
+        </table>
     </main>
 </body>
 <script>
     selected = -1;
 
-    function openLes(index) {
-        selected = selected !== index ? index : -1;
-
-        updateSelected();
-        console.log("Selected index: " + selected);
-    }
-
-    function updateSelected () {
+    function displaySection(index) {
+        if (selected === index) {
+            selected = index = -1;
+        }
         for (let i = 0; i < 5; i++) {
-            let header = $(`#header-les${i}`);
-            let items = $(`#items-les${i}`);
+            let header = $(`#les${i}-header`);
+            let content = $(`#les${i}-content`);
 
-            if (i === selected) {
-                header.removeClass("collapsed");
-                items.removeClass("hidden");
+            if (i === index) {
+                selected = index;
+                header.addClass("expand");
+                header.removeClass("collapse");
+                content.removeClass("hidden");
             }
             else {
-                header.addClass("collapsed");
-                items.addClass("hidden");
+                header.addClass("collapse");
+                header.removeClass("expand");
+                content.addClass("hidden");
             }
         }
     }
 </script>
 <script>
-    updateSelected();
+    function submitSearch() {
+        let query = $("#query").val();
+        if (query != "") {
+            window.open(`https://www.google.com/search?q=site:kaisadilla.github.io/dint/+${query}`, "_self");
+        }
+    }
+
+    var input = document.getElementById("query");
+
+    input.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        $("#submit-query").click();
+    }
+    }); 
 </script>
 </html>
