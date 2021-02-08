@@ -151,15 +151,15 @@ body {
             }
         }
         &:not(.collapsed) {
-            border-left: 1px solid $purple8;
-            border-right: 1px solid $purple8;
-            border-bottom: 1px solid $purple8;
+            border-left: 1px solid $purple9;
+            border-right: 1px solid $purple9;
+            border-bottom: 1px solid $purple9;
             border-radius: 10px;
         }
 
         .les-header {
             display: block;
-            background-color: $purple8;
+            background-color: $purple9;
             color: $purple1;
             font-weight: 600;
             border-top-left-radius: 5px;
@@ -171,6 +171,10 @@ body {
 
             &:active {
                 outline: none;
+            }
+
+            &:hover {
+                background-color: $purple7;
             }
         }
 

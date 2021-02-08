@@ -106,14 +106,14 @@ body {
   border-radius: 5px;
 }
 .les-container .les-display:not(.collapsed) {
-  border-left: 1px solid #6A1B9A;
-  border-right: 1px solid #6A1B9A;
-  border-bottom: 1px solid #6A1B9A;
+  border-left: 1px solid #4A148C;
+  border-right: 1px solid #4A148C;
+  border-bottom: 1px solid #4A148C;
   border-radius: 10px;
 }
 .les-container .les-display .les-header {
   display: block;
-  background-color: #6A1B9A;
+  background-color: #4A148C;
   color: #E1BEE7;
   font-weight: 600;
   border-top-left-radius: 5px;
@@ -125,6 +125,9 @@ body {
 }
 .les-container .les-display .les-header:active {
   outline: none;
+}
+.les-container .les-display .les-header:hover {
+  background-color: #7B1FA2;
 }
 .les-container .les-display .les-items {
   width: 100%;
