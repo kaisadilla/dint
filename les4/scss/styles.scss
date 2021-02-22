@@ -45,13 +45,23 @@ main {
     padding: 10px 20px;
     width: calc(100% - #{340px});
 
-    .img-center {
+    .img-center > img {
         display: block;
         margin: 0 auto;
         border-radius: 6px;
+        max-width: 800px;
     }
 
     ol, ul > li {
         margin-bottom: 6px;
     }
+}
+
+code {
+    font-family: Consolas, 'Courier New', Courier, monospace;
+    font-size: 10pt;
+    background-color: #ccc;
+    padding: 0 6px;
+    border-radius: 3px;
+    border: 1px dashed #777;
 }
