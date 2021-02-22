@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The most accessible webpage ever</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header role="heading">
+        <a class="menu-icon" href="javascript:void(0)" onclick="openMenu()"><span class="material-icons">menu</span></a>
+        <a href="the-most-accessible-webpage-ever.html" tabindex="0">Resumen</a>
+        <a href="tmawe-form.html" tabindex="1">Práctica</a>
+        <a href="tmawe-test.html" tabindex="2">Tests</a>
+    </header>
+    <nav role="navigation" id="nav-comp">
+    </nav>
+    <div class="body">
+        <main role="main">
+            <h1>Herramientas utilizadas</h1>
+            <h2>Lighthouse de Chromium</h2>
+            <img class="img-center" src="img/accesibility-2.png" alt="Test accesibilidad 2">
+            <p>Los resultados del test lighthouse de Chromium.</p>
+            <h2>ARIA DevTools</h2>
+            <img class="img-center" src="img/aria-dev-tools-1.png" alt="Visualización ARIA">
+            <img class="img-center" src="img/aria-dev-tools-2.png" alt="Visualización ARIA">
+            <p>Árbol de accesibilidad generado. Se puede apreciar que aparece el contenido de las etiquetas ARIA-label</p>
+            <h2>ChromeVOX</h2>
+            <p>Se ha utilizado el lector de pantalla ChromeVOX para probar y verificar que la página se puede navegar auditivamente.</p>
+        </main>
+        <footer aria-label="Información legal sobre la página">
+            <p>Maecenas tempor maximus aliquam. Duis auctor erat a fermentum volutpat. Nunc libero sapien, venenatis quis nisl ac, egestas mollis urna. Donec sit amet interdum quam, in malesuada felis. Aenean vulputate velit ut ligula lobortis, at lacinia leo varius. Aenean dignissim sapien quis nisl mattis, quis eleifend ligula mollis. Duis quis tortor vel diam tristique molestie non ut quam.</p>
+        </footer>
+    </div>
+</body>
+</html>
+<script>
+    function openMenu () {
+        const navComp = document.querySelector("#nav-comp");
+
+        if (navComp.classList.contains("display")) {
+        document.querySelector("#nav-comp").classList.remove("display");
+        }
+        else {
+        document.querySelector("#nav-comp").classList.add("display");
+        }
+    }
+</script>

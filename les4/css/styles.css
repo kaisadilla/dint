@@ -65,21 +65,29 @@ nav p {
   padding: 0 25px;
 }
 
-main {
+.body {
   position: absolute;
   margin-top: 50px;
   margin-left: 0px;
-  padding: 10px 20px;
-  width: calc(100% - 40px);
+  width: calc(100% - 20px);
 }
-main img.img-center, main picture.img-center img {
+.body main {
+  height: fit-content;
+  padding: 10px 20px;
+}
+.body img.img-center, .body picture.img-center img {
   display: block;
   margin: 0 auto;
   border-radius: 6px;
   max-width: 400px;
 }
-main ol, main ul > li {
+.body ol, .body ul > li {
   margin-bottom: 6px;
+}
+.body footer {
+  background-color: #999;
+  width: 100%;
+  padding: 15px;
 }
 
 code {
@@ -91,31 +99,6 @@ code {
   border: 1px dashed #777;
 }
 
-@media only screen and (min-width: 600px) {
-  header a {
-    font-size: 14pt;
-  }
-  header .menu-icon {
-    display: none;
-  }
-
-  nav {
-    position: fixed;
-    width: 300px;
-    margin-top: 50px;
-    height: calc(100vh - 50px);
-  }
-
-  main {
-    position: absolute;
-    margin-top: 50px;
-    margin-left: 300px;
-    width: calc(100% - 340px);
-  }
-  main img.img-center, main picture.img-center img {
-    max-width: 800px;
-  }
-}
 form {
   border: 2px dashed #3c3c3c;
   border-radius: 10px;
@@ -161,6 +144,35 @@ form .field-radio .radio-div {
 }
 form .field-radio:not(:last-child) {
   border-bottom: 1px dotted #777;
+}
+
+@media only screen and (min-width: 600px) {
+  header a {
+    font-size: 14pt;
+  }
+  header .menu-icon {
+    display: none;
+  }
+
+  nav {
+    position: fixed;
+    width: 300px;
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+  }
+
+  .body {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 300px;
+    width: calc(100% - 330px);
+  }
+  .body img.img-center, .body picture.img-center img {
+    max-width: 800px;
+  }
+  .body main {
+    min-height: 75.2vh;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

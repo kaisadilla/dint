@@ -72,12 +72,15 @@ nav {
     }
 }
 
-main {
+.body {
     position: absolute;
     margin-top: 50px;
     margin-left: 0px;
-    padding: 10px 20px;
-    width: calc(100% - #{40px});
+    width: calc(100% - #{20px});
+    main {
+        height: fit-content;
+        padding: 10px 20px;
+    }
 
     img.img-center, picture.img-center img {
         display: block;
@@ -88,6 +91,12 @@ main {
 
     ol, ul > li {
         margin-bottom: 6px;
+    }
+
+    footer {
+        background-color: #999;
+        width: 100%;
+        padding: 15px;
     }
 }
 
@@ -100,32 +109,7 @@ code {
     border: 1px dashed #777;
 }
 
-@media only screen and (min-width: 600px) {
-    header {
-        a {
-            font-size: 14pt;
-        }
-        .menu-icon {
-            display: none;
-        }
-    }
-    nav {
-        position: fixed;
-        width: 300px;
-        margin-top: 50px;
-        height: calc(100vh - #{50px});
-    }
-    main {
-        position: absolute;
-        margin-top: 50px;
-        margin-left: 300px;
-        width: calc(100% - #{340px});
 
-        img.img-center, picture.img-center img {
-            max-width: 800px;
-        }
-    }
-}
 
 form {
     border: 2px dashed #3c3c3c;
@@ -176,6 +160,37 @@ form {
 
         &:not(:last-child) {
             border-bottom: 1px dotted #777;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    header {
+        a {
+            font-size: 14pt;
+        }
+        .menu-icon {
+            display: none;
+        }
+    }
+    nav {
+        position: fixed;
+        width: 300px;
+        margin-top: 50px;
+        height: calc(100vh - #{50px});
+    }
+    .body {
+        position: absolute;
+        margin-top: 50px;
+        margin-left: 300px;
+        width: calc(100% - #{330px});
+
+        img.img-center, picture.img-center img {
+            max-width: 800px;
+        }
+
+        main {
+            min-height: 75.2vh;
         }
     }
 }
