@@ -6,44 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The most accessible webpage ever</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header role="heading">
-        <a href="javascript:void(0)" tabindex="0">Página principal</a>
-        <a href="javascript:void(0)" tabindex="1">Artículos</a>
-        <a href="javascript:void(0)" tabindex="2">Acerca de</a>
-        <a href="javascript:void(0)" tabindex="3">Opciones</a>
+        <a class="menu-icon" href="javascript:void(0)" onclick="openMenu()"><span class="material-icons">menu</span></a>
+        <a href="the-most-accessible-webpage-ever.html" tabindex="0">Resumen</a>
+        <a href="tmawe-form.html" tabindex="1">Práctica</a>
+        <a href="tmawe-test.html" tabindex="2">Tests</a>
     </header>
-    <nav role="navigation">
-        <ul id="navlist">
-            <li>Acerca de la accesibilidad</li>
+    <nav role="navigation" id="nav-comp">
+        <ul id="navlist" aria-label="Use this panel to navigate through the content">
+            <li><a href="#s1">Acerca de la accesibilidad</a></li>
             <ul>
-                <li>¿Qué es la accesibilidad?</li>
-                <li>Pautas generales</li>
-                <li>Diversidad de usuarios</li>
+                <li><a href="#s11">¿Qué es la accesibilidad?</a></li>
+                <li><a href="#s12">Pautas generales</a></li>
+                <li><a href="#s13">Diversidad de usuarios</a></li>
             </ul>
-            <li>Foco</li>
+            <li><a href="#s2">Foco</a></li>
             <ul>
-                <li>¿Qué es el foco?</li>
-                <li>¿A qué se puede enfocar?</li>
-                <li>Orden del DOM</li>
-                <li>Tabindex</li>
-                <li>Trampas de teclado</li>
+                <li><a href="#s21">¿Qué es el foco?</a></li>
+                <li><a href="#s22">¿A qué se puede enfocar?</a></li>
+                <li><a href="#s23">Orden del DOM</a></li>
+                <li><a href="#s24">Tabindex</a></li>
+                <li><a href="#s25">Trampas de teclado</a></li>
             </ul>
-            <li>Semántica</li>
+            <li><a href="#s3">Semántica</a></li>
             <ul>
-                <li>Tecnología de asistencia</li>
-                <li>El árbol de accesibilidad</li>
-                <li>Semántica en HTML</li>
-                <li>ARIA</li>
-                <li>¿Qué puede hacer ARIA?</li>
+                <li><a href="#s31">Tecnología de asistencia</a></li>
+                <li><a href="#s32">El árbol de accesibilidad</a></li>
+                <li><a href="#s33">Semántica en HTML</a></li>
+                <li><a href="#s34">ARIA</a></li>
+                <li><a href="#s35">¿Qué puede hacer ARIA?</a></li>
             </ul>
         </ul>
     </nav>
     <main role="main">
         <h1>Accesibilidad</h1>
-        <h2>Acerca de la accesibilidad</h2>
-        <h3>¿Qué es la accesibilidad?</h3>
+        <h2 id="s1">Acerca de la accesibilidad</h2>
+        <h3 id="s11">¿Qué es la accesibilidad?</h3>
         <p>Decimos que una página es accesible cuando puede ser utilizada por cualquier usuario, independientemente de su condición, discapacidad, limitación de hardware o software, etc.</p>
         <p>Para conseguir esta accesibilidad, esta página ha de ofrecer alternativas a las formas comunes de navegar que tienen los usuarios (por ejemplo, una alternativa al uso del ratón). Esta página deberá ser diseñada evitando utilizar propiedades que puedan suponer una dificultad para algunos usuarios (por ejemplo, el uso de colores con poco contraste entre ellos), o que excluyan a personas con ciertos problemas (por ejemplo, un vídeo sin transcripción no podrá ser utilizado por una persona con problemas auditivos o que, simplemente, no pueda utilizar altavoces / auriculares).</p>
         <p>La accesibilidad afecta también al uso de diferentes dispositivos. Una página web diseñada exclusivamente para escritorio podría no ser fácil de usar en un <i>smartphone</i>.</p>
@@ -64,7 +65,7 @@
             <img src="img/form-accessibility-bad.jpg" alt="El mismo formulario, pero con los elementos adaptados para ser accesibles.">
         </picture>
         <p>En contraste, este formulario contiene la misma información, pero presentada de una forma que no causa problemas ni inconvenientes a ningún usuario.</p>
-        <h3>Pautas generales</h3>
+        <h3 id="s12">Pautas generales</h3>
         <p>A las pautas generales para que una página sea accesible se les llama "POUR", por sus siglas en inglés (Perceivable, Operable, Understandable and Robust):</p>
         <ul>
             <li><b>Perceptible</b> (perceivable): Cualquier usuario debe ser capaz de percibir el contenido. El contenido debería poderse ver fácilmente por cualquiera que pueda ver, aunque su visión sea mala. El contenido debería poderse además oír por personas que no pueden ver.</li>
@@ -72,7 +73,7 @@
             <li><b>Entendible</b> (understandable): Cualquier usuario debe poder entender la página. La interfaz debe ser intuitiva, y el contenido debe evitar utilizar lenguaje extraño o arcaico.</li>
             <li><b>Robusto</b> (robust): Cualquier navegador común debe ser capaz de mostrar el contenido correctamente, y los programas especializados para discapacitados deben ser capaz de entender la página.</li>
         </ul>
-        <h3>Diversidad de usuarios</h3>
+        <h3 id="s13">Diversidad de usuarios</h3>
         <p>Internet es utilizado por multitud de usuarios, con distintas capacidades y equipo técnico.</p>
         <p>Por ejemplo, algunos usuarios tienen discapacidades visuales. Estos se dividen en varias categorías: desde personas invidentes, hasta personas que puede ver, aunque con dificultad. Las personas invidentes necesitan un lector de pantalla o un dispositivo braille para acceder al contenido, mientras que personas con la vista deteriorada puede que sean capaces de navegar sin problemas si la página ofrece el contenido de forma clara y con un buen contraste de colores. Una persona daltónica puede navegar una página sin problemas, pero le será difícil entender un gráfico o una tabla donde la información se transmite a través del uso de colores.</p>
         <picture class="img-center">
@@ -88,26 +89,26 @@
         <p>Una página debe, además, evitar utilizar sonidos como único medio para transmitir información. Por ejemplo, un botón que hace un sonido para comunicar que se ha activado no es accesible, ya que cualquier persona que no pueda oírlo no tiene forma de saber que ha sido activado.</p>
         <p>Como siempre, estos problemas pueden afectar a personas sin discapacidad. Una persona en un ambiente ruidoso, o en un ambiente donde no debe hacer ruido, también tendrá problemas para acceder a contenido auditivo que no ofrece alternativas visuales.</p>
         
-        <h2>Foco</h2>
-        <h3>¿Qué es el foco?</h3>
+        <h2 id="s2">Foco</h2>
+        <h3 id="s21">¿Qué es el foco?</h3>
         <p>El foco determina qué elemento está "activo" para su uso en cada momento. Los eventos de teclado (como escribir) se aplicarán al elemento que esté activo (por ejemplo, se escribirá en el cuadro de texto que tenga el foco.</p>
         <p>Para las personas que utilizan el teclado para navegar e interactuar con la página, el foco es esencial, ya que es necesario para que puedan realizar estas tareas corerctamente. Una página debería poder ser utilizada al completo tan solo con el teclado, exceptuando únicamente las interacciones que, por su naturaleza, requieran otros dispositivos (por ejemplo, un panel de dibujo).</p>
         <p>Para cambiar el foco de la página, normalmente se utilizan las teclas <code translate="no" dir="ltr">TAB</code> y <code translate="no" dir="ltr">SHIFT+TAB</code></p>
-        <h3>¿A qué se puede enfocar?</h3>
+        <h3 id="s22">¿A qué se puede enfocar?</h3>
         <p>Por norma general, a cualquier elemento HTML interactivo. Esto incluye campos ded texto, botones, listas, enlaces, etc. A otros elementos, como los párrafos o los títulos no se les puede enfocar.</p>
-        <h3>Orden del DOM</h3>
+        <h3 id="s23">Orden del DOM</h3>
         <p>Los elementos nativos adquieren su "tab order" (orden en el que se enfocan) directamente de su posición en el DOM. El problema es que, mediante CSS, los elementos se pueden posicionar en un orden diferente al que aparecen en el DOM, dando lugar, a veces, a una navegación por teclado poco intuitiva. También es un problema aquel contenido que están oculto de forma artificial (por ejemplo, situándolos fuera de la pantalla) por diversos motivos (por ejemplo, un menú que solo se muestra al abrirlo desde un botón), ya que estos elementos también serán candidatos a recibir el foco al navegar. Las etiquetas css <code translate="no" dir="ltr">display: none;</code> y <code translate="no" dir="ltr">visibility: hidden</code> ayudan con este problema, ya que semánticamente indican que el elemento está oculto.</p>
-        <h3>Tabindex</h3>
+        <h3 id="s24">Tabindex</h3>
         <p><code translate="no" dir="ltr">tabindex</code> es una etiqueta HTML que nos permite definir el índice de navegación de un elemento, sobreescribiendo el que por defecto le correspondería por el DOM. A <code translate="no" dir="ltr">tabindex</code> hay que asignarle un valor numérico positivo. Si se le asigna "-1", el elemento será excluído del orden de navegación, aunque podrá adquirir el foco por otros medios (por ejemplo, programáticamente).</p>
-        <h3>Trampas de teclado</h3>
+        <h3 id="s25">Trampas de teclado</h3>
         <p>Llamamos "trampa de teclado" a cualquier situación en la que, una vez accedes a un elemento mediante el teclado, ya no puedes continuar navegando la página completamente. Por ejemplo, un campo de texto obligatorio que retiene el foco cada vez que el usuario intenta enfocar otro elemento, hasta que el campo sea rellenado.</p>
         <p>Este comportamiento suele ser malo, aunque a veces es deseable. Por ejemplo, cuando se muestra una notifiación encima de la pantalla que el usuario tiene que cerrar, no queremos que pueda recorrer los elementos "ocultos" detrás de esta notificación. Programáticamente podemos almacenar el elemento que tenía el foco antes de abrir la notificación, y devolverle el foco una vez se cierre.</p>
 
-        <h2>Semántica</h2>
-        <h3>Tecnología de asistencia</h3>
+        <h2 id="s3">Semántica</h2>
+        <h3 id="s31">Tecnología de asistencia</h3>
         <p>Llamamos "tecnología de asistencia" a todos aquellos dispositivos, sean <i>hardware</i> o <i>software</i>, que ayudan a una persona con discapacidad a completar una tarea. Estos elementos engloban, desde una simple lupa o "gafas de cerca", hasta brazos robóticos o lectores de pantalla. Para que estos dispositivos funcionen correctamente, es preciso que la página en cuestión tenga elementos semánticos apropiados que ayuden a la exposición de los mismos.</p>
         <p>Un ejemplo muy común de tecnología de asistencia son los lectores de pantalla. Su función principal es leer el texto resaltado por el usuario. Los lectores de pantalla leen, además, la función, el nombre, el valor o el estado de los elementos activos. Por ejemplo, antes de leer el cuerpo principal de una noticia, puede que indiquen que lo que se va a leer es el cuerpo (main) de la página Estos programas necesitan una página bien estructurada y la ayuda de atributos semánticos (como los atributos aria) para identificar correctamente el contenido de una página y su estructura.</p>
-        <h3>El árbol de accesibilidad</h3>
+        <h3 id="s32">El árbol de accesibilidad</h3>
         <picture class="img-center">
             <source media="(min-width: 960px)" srcset="img/tree-structure.png">
             <source media="(min-width: 480px)" srcset="img/tree-structure-500.png">
@@ -120,7 +121,7 @@
             <li>La aplicación de asistencia entrelaza la interacción del usuario con la misma con la aplicación que muestra la página mediante su API.</li>
         </ol>
         <p>En el caso de la web, la aplicacińo que expone la página es el navegador. El navegador "traduce" el contenido recibido en un árbol de accesibilidad, y lo expone, junto a sus interacciones, mediante una API. Este es el único trabajo que realiza el navegador, el resto debe ser implementado por el programador de la página.</p>
-        <h3>Semántica en HTML</h3>
+        <h3 id="s33">Semántica en HTML</h3>
         <p>El motivo por el que un navegador puede generar un árbol de accesibilidad, en vez de necesitar uno previamente definido, es porque las etiquetas HTML tienen significado semántico. Etiquetas como <code translate="no" dir="ltr">&lt;main&gt;</code> o <code translate="no" dir="ltr">&lt;footer&gt;</code> no añaden funcionalidad sobre un simple <code translate="no" dir="ltr">&lt;div&gt;</code>. Sin embargo, definen roles diferentes para los elementos que contienen, y un navegador podrá utilizar esta información para distinguir la función del elemento que contiene un artículo de aquél que contiene una barra de navegación o la información legal de una paǵina.</p>
         <p>Este comportamiento, sin embargo, puede causar que el navegador no identifique de manera adecuada los elementos cuando utilizan etiquetas extrañas. Un botón implementado con <code translate="no" dir="ltr">&lt;div&gt;</code> en lugar de <code translate="no" dir="ltr">&lt;button&gt;</code> será interpretado como un bloque más en lugar de como un botón interactivo. En este caso, usar la etiqueta adecuada (<code translate="no" dir="ltr">&lt;button&gt;</code>) será suficiente para hacer nuestro botón accesible.</p>
         <p>Aunque el uso correcto de etiquetas HTML generan páginas bastante accesibles, algunos elementos requieren información adicional. Por ejemplo, para los elementos interactivos de un formulario, simplemente poner una descripción al lado no es suficiente para que el navegador identifique que esta descripción está referenciando al elemento. En su lugar, necesitarán estar relacionados con elementos <code translate="no" dir="ltr">&lt;label&gt;</code> que los describan. Esto permite, por ejemplo, que un lector de pantalla lea la etiqueta de un cuadro de texto aunque el foco esté sobre el cuadro y no sobre la etiqueta.</p>
@@ -133,17 +134,29 @@
         </picture>
         <p>Por ejemplo, la casa que se muestra en la imagen podría describirse simplemente como "casa" o "casa moderna", pero esta descripción no ayuda en absoluto a un usuario invidente a entender qué se está mostrando. En su lugar, una descripción más adecuada sería "casa blanca moderna, con grandes paneles de cristal y una estructura redonda, frente a una gran piscina, y situada dentro de un bosque. La casa está integrada en el medio natural que le rodea."</p>
         <p>Por el contrario, imágenes sin relevancia, como iconos que acompañan a ciertos elementos, logotipos, etc, normalmente no requieren ser leídos. Para ellos, una etiqueta <code translate="no" dir="ltr">&lt;alt&gt;</code> vacía ayudará a ignorarlos.</p>
-        <h3>ARIA</h3>
+        <h3 id="s34">ARIA</h3>
         <p>Hasta ahora hemos hablado de los elementos y atributos nativos de HTML. Sin embargo, hay algunos casos en los que estos elementos no son suficientes para describir el contenido (por ejemplo, no se puede describir un menú <i>pop-up</i> con ellos). Para estos casos, existen alternativas como ARIA.</p>
         <p>ARIA es un conjunto de atributos personalizados que empiezan por los caracteres <code translate="no" dir="ltr">&lt;aria-&gt;</code> y añaden atributos semánticos adicionales a los elementos. Algunos de ellos permiten utilizar elementos HTML con una función diferente a su función semántica (por ejemplo, un elemento <code translate="no" dir="ltr">&lt;div&gt;</code> nos permite darle la funcionalidad de un <i>checkbox</i>, pero no podemos indicar el estado del mismo a la API del navegador. Para ello, los atributos <code translate="no" dir="ltr">aria-role="checkbox"</code> y <code translate="no" dir="ltr">aria-checked="true / false"</code> nos proporciona esta utilidad.</p>
         <p>Es importante resaltar que ARIA no cambia ni aumenta el comportamiento de una página, ni su apariencia física. ARIA solo interactúa y modifica el árbol de accesibilidad. Hay que tener en cuenta además que ARIA está diseñado para expandir la funcionalidad semántica de HTML, no para reemplazarla. Los elementos HTML adecuados no suelen necesitar etiquetas ARIA. En el ejemplo anterior, un elemento <code translate="no" dir="ltr">&lt;input type="checkbox"&gt;</code> no habría necesitado atributos ARIA.</p>
-        <h3>¿Qué puede hacer ARIA?</h3>
+        <h3 id="s35">¿Qué puede hacer ARIA?</h3>
         <p>Como se ha mencionado antes, ARIA no afecta al comportamiento normal de una página, solo a su interacción con la tecnología de asistencia. ARIA puede proporcionar etiquetas alternativas a elementos HTML (como, por ejemplo, un botón), sin que esta etiqueta se tenga que incorporar en el diseño "normal" de la página, o puede utilizarse para indicar la relación entre distintos elementos que visualmente es evidente, pero auditivamente no. Por ejemplo, puede indicar que los botones de controles debajo de una galería de imágenes se utilizarán para recorrer dicha galería. <code translate="no" dir="ltr">aria-label</code>, por ejemplo, proporciona una etiqueta para describir un elemento HTML, mientras que <code translate="no" dir="ltr">aria-labelledby</code> indica qué elemento se utilizará para describir un elemento.</p>
         <p>Otro atributo importante es <code translate="no" dir="ltr">aria-hidden</code>. Como vimos anteriormente, ciertas propiedades CSS indicarán de forma nativa que un elemento no debe ser expuesto al usuario, pero hay veces en las que utilizar esas propiedades no es posible. En este caso, <code translate="no" dir="ltr">aria-hidden</code> cumple la misma función. Este atributo tiene la ventaja adicional de permitirnos ocultar elementos que sí se ven, pero que no son útiles para un usuario que no puede verlos. También nos permitirá ocultar etiquetas que cumplan funciones no semánticas como, por ejemplo, etiquetas <code translate="no" dir="ltr">&lt;div&gt;</code> utilizadas para elaborar la estructura de un elemento.</p>
 
         <h2>Tests de accesibilidad:</h2>
-        <img src="img/accesibility-1.png" alt="Primer test de accesibilidad, con resultados 99 en rendimiento, 84 en accesibilidad, 93 en buenas prácticas y 85 en SEO" />
+        <img class="img-center" src="img/accesibility-1.png" alt="Primer test de accesibilidad, con resultados 99 en rendimiento, 84 en accesibilidad, 93 en buenas prácticas y 85 en SEO" />
         <p>Resultados del primer test de accesibilidad.</p>
     </main>
 </body>
 </html>
+<script>
+    function openMenu () {
+        const navComp = document.querySelector("#nav-comp");
+
+        if (navComp.classList.contains("display")) {
+        document.querySelector("#nav-comp").classList.remove("display");
+        }
+        else {
+        document.querySelector("#nav-comp").classList.add("display");
+        }
+    }
+</script>

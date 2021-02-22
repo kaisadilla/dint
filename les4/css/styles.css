@@ -22,33 +22,61 @@ header {
 header a {
   height: 50px;
   padding: 0 10px;
-  font-size: 14pt;
+  font-size: 12pt;
   color: #e1e1e1;
   font-weight: 600;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header a .menu-icon {
+  align-self: flex-start;
 }
 
 nav {
   position: fixed;
-  width: 300px;
+  width: 0px;
+  overflow-y: hidden;
   margin-top: 50px;
   height: calc(100vh - 50px);
   background: #cbcbcb;
   z-index: 1;
+  transition: width 0.25s;
+}
+nav.display {
+  width: 100%;
+}
+nav ul {
+  list-style: none;
+  padding-left: 25px;
+}
+nav ul li {
+  padding: 5px 0;
+}
+nav ul a {
+  text-decoration: none;
+  color: navy;
+}
+nav > ul > li {
+  font-weight: 600;
+}
+nav p {
+  padding: 0 25px;
 }
 
 main {
   position: absolute;
   margin-top: 50px;
-  margin-left: 300px;
+  margin-left: 0px;
   padding: 10px 20px;
-  width: calc(100% - 340px);
+  width: calc(100% - 40px);
 }
-main .img-center > img {
+main img.img-center, main picture.img-center img {
   display: block;
   margin: 0 auto;
   border-radius: 6px;
-  max-width: 800px;
+  max-width: 400px;
 }
 main ol, main ul > li {
   margin-bottom: 6px;
@@ -61,6 +89,78 @@ code {
   padding: 0 6px;
   border-radius: 3px;
   border: 1px dashed #777;
+}
+
+@media only screen and (min-width: 600px) {
+  header a {
+    font-size: 14pt;
+  }
+  header .menu-icon {
+    display: none;
+  }
+
+  nav {
+    position: fixed;
+    width: 300px;
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+  }
+
+  main {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 300px;
+    width: calc(100% - 340px);
+  }
+  main img.img-center, main picture.img-center img {
+    max-width: 800px;
+  }
+}
+form {
+  border: 2px dashed #3c3c3c;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 250px;
+  max-width: 325px;
+  padding: 10px;
+}
+form .field {
+  padding: 5px 0;
+  height: 24px;
+}
+form .field label {
+  float: left;
+  font-weight: 600;
+}
+form .field :not(label) {
+  float: right;
+  width: 150px;
+}
+form .field:not(:last-child) {
+  border-bottom: 1px dotted #777;
+}
+form .field button {
+  margin-top: 6px;
+}
+form .field-radio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+form .field-radio span {
+  font-weight: 600;
+  width: 120px;
+}
+form .field-radio .radios {
+  padding-right: 20px;
+}
+form .field-radio .radio-div {
+  padding: 5px 0;
+  height: 24px;
+}
+form .field-radio:not(:last-child) {
+  border-bottom: 1px dotted #777;
 }
 
 /*# sourceMappingURL=styles.css.map */

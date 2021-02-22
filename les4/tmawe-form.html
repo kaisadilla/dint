@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The most accessible webpage ever</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header role="heading">
+        <a class="menu-icon" href="javascript:void(0)" onclick="openMenu()"><span class="material-icons">menu</span></a>
+        <a href="the-most-accessible-webpage-ever.html" tabindex="0">Resumen</a>
+        <a href="tmawe-form.html" tabindex="1">Práctica</a>
+        <a href="tmawe-test.html" tabindex="2">Tests</a>
+    </header>
+    <nav role="navigation" id="nav-comp">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor id metus non euismod. Proin consequat posuere diam, at accumsan velit. Pellentesque sodales nisl ipsum, sed aliquet velit dignissim a. Curabitur tellus tellus, gravida quis placerat et, rhoncus bibendum massa. Nullam cursus lacus non purus tempor commodo. Ut porttitor, massa sit amet hendrerit facilisis, massa nulla hendrerit risus, sed suscipit enim turpis a mi. Morbi pulvinar urna metus, sed aliquet arcu sodales in. Vivamus vel urna nec felis tempus ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dictum elit sit amet orci cursus, vitae ultrices sapien rutrum. Fusce finibus quis tortor et sollicitudin. Nullam sit amet ante tempus, tempus risus non, ultrices tortor. Fusce ac accumsan quam. Donec tellus ante, interdum id libero non, blandit ultricies enim. Cras tristique ligula sed lacinia interdum. Mauris nisl urna, rhoncus vel tristique id, sodales viverra lorem. 
+            Nullam scelerisque ac libero quis tempor. Morbi vestibulum iaculis nunc quis consectetur. Donec sodales lectus non tellus bibendum, sed fringilla justo lobortis. In malesuada mi nibh, at vehicula nibh blandit a. Sed sollicitudin nunc urna, vitae tincidunt ipsum hendrerit nec. Ut pellentesque libero lacus, non congue leo vulputate a. Phasellus commodo lacus sed felis aliquet tincidunt. Nulla pulvinar placerat diam, ut finibus nisl placerat ac. Nunc dapibus, urna sed aliquam blandit, ex sem egestas nisi, in vestibulum justo mi sed enim. Integer placerat, sapien sed ultricies porttitor, tellus diam facilisis enim, vitae bibendum orci felis et mi. Suspendisse vitae erat justo. Aliquam sodales diam a diam tempus congue. Etiam fringilla fringilla metus, in vehicula libero volutpat quis. Nunc et molestie justo, sit amet facilisis ipsum. Donec imperdiet placerat elit, cursus finibus metus lobortis in. Aenean id vestibulum est. 
+            Maecenas tempor maximus aliquam. Duis auctor erat a fermentum volutpat. Nunc libero sapien, venenatis quis nisl ac, egestas mollis urna. Donec sit amet interdum quam, in malesuada felis. Aenean vulputate velit ut ligula lobortis, at lacinia leo varius. Aenean dignissim sapien quis nisl mattis, quis eleifend ligula mollis. Duis quis tortor vel diam tristique molestie non ut quam. 
+            Pellentesque posuere turpis sit amet porta semper. Suspendisse blandit pretium leo tempor suscipit. Ut a mauris lacus. Nullam mollis dui ac diam interdum, in placerat dui placerat. Pellentesque volutpat urna id elit interdum, ut scelerisque urna aliquet. Etiam eget volutpat ipsum. Curabitur convallis est sed semper condimentum. Phasellus sapien odio, fringilla vitae lacus vitae, interdum vulputate diam. Sed placerat porta augue, a finibus purus malesuada id. Proin ut mauris aliquam, vulputate dui sed, placerat nulla. 
+            Nulla facilisi. Suspendisse consectetur nisl nec lacus feugiat, ac euismod libero sollicitudin. Donec blandit leo leo, id vehicula diam cursus sit amet. Mauris et bibendum urna, in dapibus diam. Proin ac arcu ante. Nam sit amet condimentum lorem, et elementum lacus. In nec lacus sit amet tortor porttitor ultrices vitae eu odio. Donec diam nunc, dignissim sed porttitor non, lobortis ut justo. </p>
+    </nav>
+    <main role="main">
+        <form>
+            <div class="field">
+                <label for="product">Producto</label>
+                <input type="text" id="product">
+            </div>
+            <div class="field">
+                <label for="payment">Método de pago</label>
+                <select id="payment">
+                    <option tabindex="0">Tarjeta</option>
+                    <option tabindex="-1">En efectivo</option>
+                    <option tabindex="-1">Deber una</option>
+                </select>
+            </div>
+            <div class="field-radio">
+                <span>Recogida</span>
+                <div class="radios">
+                    <div class="radio-div">
+                        <input type="radio" name="delivery" id="collection" checked />
+                        <label for="collection">Recogida</label>
+                    </div>
+                    <div class="radio-div">
+                        <input type="radio" name="delivery" id="delivery" checked />
+                        <label for="delivery">Envío</label>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label for="remember">¿Recordar?</label>
+                <input type="checkbox" id="remember" checked>
+            </div>
+            <div class="field">
+                <button type="button" aria-label="presione enter para comprar">Comprar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
+<script>
+    function openMenu () {
+        const navComp = document.querySelector("#nav-comp");
+
+        if (navComp.classList.contains("display")) {
+        document.querySelector("#nav-comp").classList.remove("display");
+        }
+        else {
+        document.querySelector("#nav-comp").classList.add("display");
+        }
+    }
+</script>
