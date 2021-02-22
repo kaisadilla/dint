@@ -1,0 +1,94 @@
+header {
+  background-color: #0b5c1b;
+  color: #ffa600;
+  height: 75px;
+  width: calc(100% - 30px);
+  padding-left: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header span {
+  font-weight: 600;
+  font-size: 20pt;
+}
+
+nav {
+  background-color: #0e4718;
+}
+nav ul {
+  list-style-type: none;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav ul li {
+  display: block;
+}
+nav ul li a {
+  color: #f9d57a;
+  text-decoration: none;
+  padding: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  nav ul {
+    justify-content: flex-start;
+  }
+  nav ul li {
+    padding-left: 20px;
+  }
+}
+main {
+  min-height: calc(100vh - 75px - 32px - 150px - 20px);
+}
+
+.gallery {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.gallery .video-box {
+  padding: 10px;
+  width: 30%;
+  min-width: 320px;
+  max-width: 720px;
+}
+.gallery .video-box span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.gallery .video-box video {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid #0b5c1b;
+  border-radius: 10px;
+}
+
+footer {
+  height: 150px;
+  background-color: #649762;
+  color: #0d200c;
+  width: calc(100% - 40px);
+  padding: 10px 20px;
+}
+
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #98bf95;
+}
+
+/*# sourceMappingURL=styles.css.map */

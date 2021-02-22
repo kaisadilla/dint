@@ -1,0 +1,14 @@
+@import "variables";
+@import "header";
+@import "nav";
+@import "main";
+@import "footer";
+
+:root {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: $primary-color-light3;
+}

@@ -1,0 +1,17 @@
+header {
+    $padding-left: 30px;
+
+    background-color: $primary-color;
+    color: $secondary-color;
+    height: $height-header;
+    width: calc(100% - #{$padding-left});
+    padding-left: $padding-left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+        font-weight: 600;
+        font-size: 20pt;
+    }
+}

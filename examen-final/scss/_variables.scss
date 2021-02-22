@@ -1,0 +1,20 @@
+$primary-color: #0b5c1b;
+$primary-color-light1: #2f6f33;
+$primary-color-light2: #649762;
+$primary-color-light3: #98bf95;
+$primary-color-dark1: #0e4718;
+$primary-color-dark2: #0e3313;
+$primary-color-dark3: #0d200c;
+
+$secondary-color: #ffa600;
+$secondary-color-light1: #fbbf49;
+$secondary-color-light2: #f9d57a;
+$secondary-color-light3: #fae8aa;
+$secondary-color-dark1: #e88a19;
+$secondary-color-dark2: #ce7022;
+$secondary-color-dark3: #b25826;
+
+$height-header: 75px;
+$height-navBar: 32px;
+$height-footer: 150px;
+$height-main: calc(100vh - #{$height-header} - #{$height-navBar} - #{$height-footer} - 20px);

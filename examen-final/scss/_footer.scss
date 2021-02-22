@@ -1,0 +1,13 @@
+footer {
+    $padding-left: 20px;
+
+    height: $height-footer;
+    background-color: $primary-color-light2;
+    color: $primary-color-dark3;
+    width: calc(100% - #{$padding-left * 2});
+    padding: 10px $padding-left;
+
+    h4 {
+        margin: 2px 0 5px 0;
+    }
+}

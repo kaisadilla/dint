@@ -1,0 +1,32 @@
+nav {
+    background-color: $primary-color-dark1;
+    
+    ul {
+        list-style-type: none;
+        height: $height-navBar;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+            a {
+                color: $secondary-color-light2;
+                text-decoration: none;
+                padding: 10px;
+            }
+            display: block;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    nav {
+        ul {
+            justify-content: flex-start;
+            li {
+                padding-left: 20px;
+            }
+        }
+    }
+}
